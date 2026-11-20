@@ -1,0 +1,19 @@
+=== Segmentation tests from cli01 (VLAN10) 2026-11-19T18:21:43
+Adresse IPv4. . . . . . . . . . . . . .: 192.168.10.50
+Passerelle par d?faut. . . .?. . . . . : 192.168.10.1
+192.168.20.10:8080     Client -> application (allowed)        OPEN     expected OPEN     PASS
+192.168.20.10:3000     Client -> Grafana (MGMT/VPN only)      BLOCKED  expected BLOCKED  PASS
+192.168.20.10:22       Client -> srv01 SSH                    BLOCKED  expected BLOCKED  PASS
+192.168.20.10:9100     Client -> node_exporter                BLOCKED  expected BLOCKED  PASS
+192.168.10.1:443       Client -> pfSense webGUI (own gw)      BLOCKED  expected BLOCKED  PASS
+192.168.10.1:22        Client -> pfSense SSH                  BLOCKED  expected BLOCKED  PASS
+192.168.99.1:443       Client -> MGMT network                 BLOCKED  expected BLOCKED  PASS
+192.168.30.10:443      Client -> TrueNAS webUI                BLOCKED  expected BLOCKED  PASS
+1.1.1.1:443            Internet HTTPS                         OPEN     expected OPEN     PASS
+1.1.1.1:53             Direct external DNS (bypass)           BLOCKED  expected BLOCKED  PASS
+192.168.101.2:80       WAN-side network                       BLOCKED  expected BLOCKED  PASS
+HTTP GET app /health: {"db":"ok","status":"ok"}
+  PASS
+DNS srv01.lab.local -> 192.168.20.10 (pfSense resolver)  PASS
+DNS www.debian.org -> 130.89.148.77  PASS
+NOTE: 192.168.30.10:445 (SMB, allowed by pfSense) is tested after TrueNAS installation.

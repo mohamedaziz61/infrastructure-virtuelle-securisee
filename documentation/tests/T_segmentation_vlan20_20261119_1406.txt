@@ -1,0 +1,23 @@
+prometheus reloaded
+=== Segmentation tests from srv01 (VLAN20, 192.168.20.10) 2026-11-19T15:04:33+01:00
+192.168.10.50:9182 (Prometheus->windows_exporter) OPEN     expected OPEN     PASS
+192.168.10.50:445 (srv01->cli01 SMB) BLOCKED  expected BLOCKED  PASS
+192.168.10.50:3389 (srv01->cli01 RDP) BLOCKED  expected BLOCKED  PASS
+192.168.20.1:443 (pfSense webGUI from VLAN20) BLOCKED  expected BLOCKED  PASS
+192.168.20.1:22 (pfSense SSH from VLAN20) BLOCKED  expected BLOCKED  PASS
+192.168.99.1:443 (MGMT net from VLAN20) BLOCKED  expected BLOCKED  PASS
+192.168.99.10:22 (admin host from VLAN20) BLOCKED  expected BLOCKED  PASS
+192.168.101.1:135 (WAN-side host from VLAN20) BLOCKED  expected BLOCKED  PASS
+1.1.1.1:443 (Internet HTTPS)       OPEN     expected OPEN     PASS
+1.1.1.1:53 (Internet DNS direct (bypass)) BLOCKED  expected BLOCKED  PASS
+--- DNS via gateway
+www.debian.org: 2001:67c:2564:a119::77                      -- link: lan0
+--- ICMP
+gw ping OK
+MGMT ping: OPEN (FAIL)
+--- RETEST after narrowing ICMP rule 2026-11-19T15:05:40+01:00
+MGMT ping 192.168.99.1: BLOCKED (PASS)
+admin host ping: BLOCKED (PASS)
+gateway ping: OPEN (PASS)
+probe 192.168.20.1 1
+probe 192.168.30.10 0

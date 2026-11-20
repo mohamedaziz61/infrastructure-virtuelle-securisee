@@ -1,0 +1,71 @@
+** WARNING: connection is not using a post-quantum key exchange algorithm.
+** This session may be vulnerable to "store now, decrypt later" attacks.
+** The server may need to be upgraded. See https://openssh.com/pq.html
+=== pfSense tests Thu Nov 19 12:43:15 CET 2026
+--- T-SSH: key login OK (this session); password auth disabled:
+ChallengeResponseAuthentication no
+PasswordAuthentication no
+--- T-IF interfaces
+em0 192.168.101.10/0xffffff00 active
+em1 192.168.10.1/0xffffff00 active
+em2 192.168.20.1/0xffffff00 active
+em3 192.168.30.1/0xffffff00 active
+em4 192.168.99.1/0xffffff00 active
+--- T-GW default route
+default            192.168.101.2      UGS         em0
+--- T-NAT internet from firewall (ping 9.9.9.9 via WAN)
+--- 9.9.9.9 ping statistics ---
+2 packets transmitted, 0 packets received, 100.0% packet loss
+--- T-DNS unbound resolves external + local host overrides
+Error: error sending query: Could not send or receive, because of network error
+srv01.lab.local.	3600	IN	A	192.168.20.10
+nas01.lab.local.	3600	IN	A	192.168.30.10
+--- T-DNSSEC
+Error: error sending query: Could not send or receive, because of network error
+SERVFAIL for broken-DNSSEC domain (expect 1): 0
+--- T-NAT outbound rules
+nat on em0 inet from <tonatsubnets> to any port = isakmp -> 192.168.101.10 static-port
+nat on em0 inet6 from <tonatsubnets> to any port = isakmp -> (em0) round-robin static-port
+nat on em0 inet from <tonatsubnets> to any -> 192.168.101.10 port 1024:65535
+nat on em0 inet6 from <tonatsubnets> to any -> (em0) port 1024:65535 round-robin
+--- T-FW rule count per interface / default deny
+96
+block drop in log inet all label "Default deny rule IPv4" ridentifier 1000000103
+block drop out log inet all label "Default deny rule IPv4" ridentifier 1000000104
+block drop in log inet6 all label "Default deny rule IPv6" ridentifier 1000000105
+--- T-FW lab rules (labels)
+   1 label "USER_RULE: Allow scrape replies / ping gw"
+   1 label "USER_RULE: Blackbox -> NAS https/smb"
+   1 label "USER_RULE: Blackbox -> NAS smb"
+   1 label "USER_RULE: Blackbox ICMP to internal"
+   3 label "USER_RULE: Block access to firewall"
+   3 label "USER_RULE: Block other internal networks"
+   1 label "USER_RULE: Clients -> App srv01:8080"
+   1 label "USER_RULE: Clients -> NAS SMB"
+   6 label "USER_RULE: DNS to gateway"
+   6 label "USER_RULE: Internet HTTP/HTTPS"
+   3 label "USER_RULE: Internet ICMP"
+   1 label "USER_RULE: Management: full admin access"
+   3 label "USER_RULE: NTP to gateway"
+   1 label "USER_RULE: OpenVPN remote access"
+   1 label "USER_RULE: Prometheus -> pfSense SNMP"
+   1 label "USER_RULE: Prometheus -> windows_exporter"
+   2 label "USER_RULE: VPN -> App + Grafana"
+   1 label "USER_RULE: VPN -> NAS SMB"
+   1 label "USER_RULE: VPN ICMP"
+--- T-DHCP dhcpd running + leases
+2821 /usr/local/sbin/dhcpd -user dhcpd -group _dhcp -chroot /var/dhcpd -cf /etc/dhcpd.conf -pf /var/run/dhcpd.pid em1
+55141 /usr/sbin/syslogd -s -c -c -l /var/dhcpd/var/run/log -P /var/run/syslog.pid -f /etc/syslog.conf
+--- T-VPN openvpn server
+28251 /usr/local/sbin/openvpn --config /var/etc/openvpn/server1/config.ovpn
+root     openvpn    28251 6   udp4   192.168.101.10:1194   *:*
+	inet 10.8.0.1 netmask 0xffffff00 broadcast 10.8.0.255
+	inet6 fe80::250:56ff:fe2a:110%ovpns1 prefixlen 64 scopeid 0xa
+--- T-SNMP bsnmpd
+root     bsnmpd      4013 4   udp4   *:*                   *:*
+root     bsnmpd      4013 5   udp4   192.168.20.1:161      *:*
+--- T-MGMT webGUI/ssh listeners
+root     nginx      16022 5   tcp4   *:443                 *:*
+root     nginx      15855 5   tcp4   *:443                 *:*
+root     nginx      15762 5   tcp4   *:443                 *:*
+root     sshd       79894 4   tcp4   *:22                  *:*

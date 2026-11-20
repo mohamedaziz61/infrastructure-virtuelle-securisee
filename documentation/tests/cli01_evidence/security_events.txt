@@ -1,0 +1,927 @@
+Event[0]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:51.676
+  Event ID: 4673
+  Task: Utilisation de privilÞges sensibles
+  Level: Information
+  Opcode: Informations
+  Keyword: ╔chec de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+Un service privilÚgiÚ a ÚtÚ appelÚ.
+
+Sujetá:
+	ID de sÚcuritÚá:		S-1-5-18
+	Nom du compteá:		CLI01$
+	Domaine du compteá:		WORKGROUP
+	ID dÆouverture de sessioná:		0x3e7
+
+Serviceá:
+	Serveurá:	Security Account Manager
+	Nom du serviceá:	Security Account Manager
+
+Processusá:
+	ID du processusá:	0x1cc
+	Nom du processusá:	C:\Windows\System32\lsass.exe
+
+Informations sur la demande de serviceá:
+	PrivilÞgesá:		SeTcbPrivilege
+
+Event[1]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:51.660
+  Event ID: 4673
+  Task: Utilisation de privilÞges sensibles
+  Level: Information
+  Opcode: Informations
+  Keyword: ╔chec de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+Un service privilÚgiÚ a ÚtÚ appelÚ.
+
+Sujetá:
+	ID de sÚcuritÚá:		S-1-5-18
+	Nom du compteá:		CLI01$
+	Domaine du compteá:		WORKGROUP
+	ID dÆouverture de sessioná:		0x3e7
+
+Serviceá:
+	Serveurá:	Security Account Manager
+	Nom du serviceá:	Security Account Manager
+
+Processusá:
+	ID du processusá:	0x1cc
+	Nom du processusá:	C:\Windows\System32\lsass.exe
+
+Informations sur la demande de serviceá:
+	PrivilÞgesá:		SeTcbPrivilege
+
+Event[2]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:51.660
+  Event ID: 4673
+  Task: Utilisation de privilÞges sensibles
+  Level: Information
+  Opcode: Informations
+  Keyword: ╔chec de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+Un service privilÚgiÚ a ÚtÚ appelÚ.
+
+Sujetá:
+	ID de sÚcuritÚá:		S-1-5-18
+	Nom du compteá:		CLI01$
+	Domaine du compteá:		WORKGROUP
+	ID dÆouverture de sessioná:		0x3e7
+
+Serviceá:
+	Serveurá:	Security Account Manager
+	Nom du serviceá:	Security Account Manager
+
+Processusá:
+	ID du processusá:	0x1cc
+	Nom du processusá:	C:\Windows\System32\lsass.exe
+
+Informations sur la demande de serviceá:
+	PrivilÞgesá:		SeTcbPrivilege
+
+Event[3]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:41.068
+  Event ID: 5156
+  Task: Connexion de la plateforme de filtrage
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+La plateforme WPF (Windows Filtering Platform) a autorisÚ une connexion.
+
+Informations sur lÆapplicationá:
+	ID du processusá:		760
+	Nom de lÆapplicationá:	\device\harddiskvolume1\windows\system32\svchost.exe
+
+Informations sur le rÚseauá:
+	Directioná:		Sortant
+	Adresse sourceá:		fe80::6c34:f443:5de:6b0f
+	Port sourceá:		546
+	Adresse de destinationá:	ff02::1:2
+	Port de destinationá:		547
+	Protocoleá:		17
+
+Informations sur le filtreá:
+	ID dÆexÚcution du filtreá:	67076
+	Nom de la coucheá:		Connexion
+	ID dÆexÚcution de la coucheá:	50
+
+Event[4]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.714
+  Event ID: 4688
+  Task: CrÚation du processus
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+Un nouveau processus a ÚtÚ crÚÚ.
+
+Sujetá:
+	ID de sÚcuritÚá:		S-1-5-18
+	Nom du compteá:		CLI01$
+	Domaine du compteá:		WORKGROUP
+	ID dÆouverture de sessioná:		0x3e7
+
+Informations sur le processusá:
+	ID du nouveau processusá:		0x710
+	Nom du nouveau processusá:	C:\Windows\System32\timeout.exe
+	Type dÆÚlÚvation du jetoná:	Type dÆÚlÚvation de jeton par dÚfaut (1)
+	ID du processus crÚateurá:	0x470
+
+Le type dÆÚlÚvation du jeton indique le type de jeton qui a ÚtÚ attribuÚ au nouveau processus conformÚment Ó la stratÚgie de contr¶le du compte dÆutilisateur.
+
+Le type 1 est un jeton complet sans aucun privilÞge supprimÚ ni aucun groupe dÚsactivÚ. Un jeton complet est uniquement utilisÚ si le contr¶le du compte dÆutilisateur est dÚsactivÚ, ou si lÆutilisateur est le compte dÆadministrateur intÚgrÚ ou un compte de service.
+
+Le type 2 est un jeton aux droits ÚlevÚs sans aucun privilÞge supprimÚ ni aucun groupe dÚsactivÚ. Un jeton aux droits ÚlevÚs est utilisÚ lorsque le contr¶le de compte dÆutilisateur est activÚ et que lÆutilisateur choisit de dÚmarrer le programme en tant quÆadministrateur. Un jeton aux droits ÚlevÚs est Úgalement utilisÚ lorsquÆune application est configurÚe pour toujours exiger un privilÞge administratif ou pour toujours exiger les privilÞges maximum, et que lÆutilisateur est membre du groupe Administrateurs.
+
+Le type 3 est un jeton limitÚ dont les privilÞges administratifs sont supprimÚs et les groupes administratifs dÚsactivÚs. Le jeton limitÚ est utilisÚ lorsque le contr¶le de compte dÆ utilisateur est activÚ, que lÆapplication nÆexige pas le privilÞge administratif et que lÆutilisateur ne choisit pas de dÚmarrer le programme en tant quÆadministrateur.
+
+Event[5]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.714
+  Event ID: 4689
+  Task: Fin du processus
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+Un processus est terminÚ.
+
+Sujetá:
+	ID de sÚcuritÚá:		S-1-5-18
+	Nom du compteá:		CLI01$
+	Domaine du compteá:		WORKGROUP
+	ID dÆouverture de sessioná:		0x3e7
+
+Informations sur le processusá:
+	ID du processusá:	0x128
+	Nom du processusá:	C:\Windows\System32\nslookup.exe
+	╔tat de finá:	0x0
+
+Event[6]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.714
+  Event ID: 5156
+  Task: Connexion de la plateforme de filtrage
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+La plateforme WPF (Windows Filtering Platform) a autorisÚ une connexion.
+
+Informations sur lÆapplicationá:
+	ID du processusá:		296
+	Nom de lÆapplicationá:	\device\harddiskvolume1\windows\system32\nslookup.exe
+
+Informations sur le rÚseauá:
+	Directioná:		Sortant
+	Adresse sourceá:		192.168.10.50
+	Port sourceá:		51353
+	Adresse de destinationá:	192.168.10.1
+	Port de destinationá:		53
+	Protocoleá:		17
+
+Informations sur le filtreá:
+	ID dÆexÚcution du filtreá:	66977
+	Nom de la coucheá:		Connexion
+	ID dÆexÚcution de la coucheá:	48
+
+Event[7]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.714
+  Event ID: 5158
+  Task: Connexion de la plateforme de filtrage
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+La plateforme WFP (Windows Filtering Platform) a autorisÚ une liaison vers un port local.
+
+Informations sur lÆapplicationá:
+	ID du processusá:		296
+	Nom de lÆapplicationá:	\device\harddiskvolume1\windows\system32\nslookup.exe
+
+Informations sur le rÚseauá:
+	Adresse sourceá:		0.0.0.0
+	Port sourceá:		51353
+	Protocoleá:		17
+
+Informations sur le filtreá:
+	ID dÆexÚcution du filtreá:	0
+	Nom de la coucheá:		Affectation des ressources
+	ID dÆexÚcution de la coucheá:	36
+
+Event[8]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.714
+  Event ID: 5156
+  Task: Connexion de la plateforme de filtrage
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+La plateforme WPF (Windows Filtering Platform) a autorisÚ une connexion.
+
+Informations sur lÆapplicationá:
+	ID du processusá:		296
+	Nom de lÆapplicationá:	\device\harddiskvolume1\windows\system32\nslookup.exe
+
+Informations sur le rÚseauá:
+	Directioná:		Sortant
+	Adresse sourceá:		192.168.10.50
+	Port sourceá:		51352
+	Adresse de destinationá:	192.168.10.1
+	Port de destinationá:		53
+	Protocoleá:		17
+
+Informations sur le filtreá:
+	ID dÆexÚcution du filtreá:	66977
+	Nom de la coucheá:		Connexion
+	ID dÆexÚcution de la coucheá:	48
+
+Event[9]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.714
+  Event ID: 5158
+  Task: Connexion de la plateforme de filtrage
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+La plateforme WFP (Windows Filtering Platform) a autorisÚ une liaison vers un port local.
+
+Informations sur lÆapplicationá:
+	ID du processusá:		296
+	Nom de lÆapplicationá:	\device\harddiskvolume1\windows\system32\nslookup.exe
+
+Informations sur le rÚseauá:
+	Adresse sourceá:		0.0.0.0
+	Port sourceá:		51352
+	Protocoleá:		17
+
+Informations sur le filtreá:
+	ID dÆexÚcution du filtreá:	0
+	Nom de la coucheá:		Affectation des ressources
+	ID dÆexÚcution de la coucheá:	36
+
+Event[10]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.714
+  Event ID: 5156
+  Task: Connexion de la plateforme de filtrage
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+La plateforme WPF (Windows Filtering Platform) a autorisÚ une connexion.
+
+Informations sur lÆapplicationá:
+	ID du processusá:		296
+	Nom de lÆapplicationá:	\device\harddiskvolume1\windows\system32\nslookup.exe
+
+Informations sur le rÚseauá:
+	Directioná:		Sortant
+	Adresse sourceá:		192.168.10.50
+	Port sourceá:		51351
+	Adresse de destinationá:	192.168.10.1
+	Port de destinationá:		53
+	Protocoleá:		17
+
+Informations sur le filtreá:
+	ID dÆexÚcution du filtreá:	66977
+	Nom de la coucheá:		Connexion
+	ID dÆexÚcution de la coucheá:	48
+
+Event[11]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.714
+  Event ID: 5158
+  Task: Connexion de la plateforme de filtrage
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+La plateforme WFP (Windows Filtering Platform) a autorisÚ une liaison vers un port local.
+
+Informations sur lÆapplicationá:
+	ID du processusá:		296
+	Nom de lÆapplicationá:	\device\harddiskvolume1\windows\system32\nslookup.exe
+
+Informations sur le rÚseauá:
+	Adresse sourceá:		0.0.0.0
+	Port sourceá:		51351
+	Protocoleá:		17
+
+Informations sur le filtreá:
+	ID dÆexÚcution du filtreá:	0
+	Nom de la coucheá:		Affectation des ressources
+	ID dÆexÚcution de la coucheá:	36
+
+Event[12]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.714
+  Event ID: 5156
+  Task: Connexion de la plateforme de filtrage
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+La plateforme WPF (Windows Filtering Platform) a autorisÚ une connexion.
+
+Informations sur lÆapplicationá:
+	ID du processusá:		296
+	Nom de lÆapplicationá:	\device\harddiskvolume1\windows\system32\nslookup.exe
+
+Informations sur le rÚseauá:
+	Directioná:		Sortant
+	Adresse sourceá:		192.168.10.50
+	Port sourceá:		51350
+	Adresse de destinationá:	192.168.10.1
+	Port de destinationá:		53
+	Protocoleá:		17
+
+Informations sur le filtreá:
+	ID dÆexÚcution du filtreá:	66977
+	Nom de la coucheá:		Connexion
+	ID dÆexÚcution de la coucheá:	48
+
+Event[13]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.714
+  Event ID: 5158
+  Task: Connexion de la plateforme de filtrage
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+La plateforme WFP (Windows Filtering Platform) a autorisÚ une liaison vers un port local.
+
+Informations sur lÆapplicationá:
+	ID du processusá:		296
+	Nom de lÆapplicationá:	\device\harddiskvolume1\windows\system32\nslookup.exe
+
+Informations sur le rÚseauá:
+	Adresse sourceá:		0.0.0.0
+	Port sourceá:		51350
+	Protocoleá:		17
+
+Informations sur le filtreá:
+	ID dÆexÚcution du filtreá:	0
+	Nom de la coucheá:		Affectation des ressources
+	ID dÆexÚcution de la coucheá:	36
+
+Event[14]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.714
+  Event ID: 5156
+  Task: Connexion de la plateforme de filtrage
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+La plateforme WPF (Windows Filtering Platform) a autorisÚ une connexion.
+
+Informations sur lÆapplicationá:
+	ID du processusá:		296
+	Nom de lÆapplicationá:	\device\harddiskvolume1\windows\system32\nslookup.exe
+
+Informations sur le rÚseauá:
+	Directioná:		Sortant
+	Adresse sourceá:		192.168.10.50
+	Port sourceá:		51349
+	Adresse de destinationá:	192.168.10.1
+	Port de destinationá:		53
+	Protocoleá:		17
+
+Informations sur le filtreá:
+	ID dÆexÚcution du filtreá:	66977
+	Nom de la coucheá:		Connexion
+	ID dÆexÚcution de la coucheá:	48
+
+Event[15]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.714
+  Event ID: 5158
+  Task: Connexion de la plateforme de filtrage
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+La plateforme WFP (Windows Filtering Platform) a autorisÚ une liaison vers un port local.
+
+Informations sur lÆapplicationá:
+	ID du processusá:		296
+	Nom de lÆapplicationá:	\device\harddiskvolume1\windows\system32\nslookup.exe
+
+Informations sur le rÚseauá:
+	Adresse sourceá:		0.0.0.0
+	Port sourceá:		51349
+	Protocoleá:		17
+
+Informations sur le filtreá:
+	ID dÆexÚcution du filtreá:	0
+	Nom de la coucheá:		Affectation des ressources
+	ID dÆexÚcution de la coucheá:	36
+
+Event[16]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.698
+  Event ID: 4688
+  Task: CrÚation du processus
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+Un nouveau processus a ÚtÚ crÚÚ.
+
+Sujetá:
+	ID de sÚcuritÚá:		S-1-5-18
+	Nom du compteá:		CLI01$
+	Domaine du compteá:		WORKGROUP
+	ID dÆouverture de sessioná:		0x3e7
+
+Informations sur le processusá:
+	ID du nouveau processusá:		0x128
+	Nom du nouveau processusá:	C:\Windows\System32\nslookup.exe
+	Type dÆÚlÚvation du jetoná:	Type dÆÚlÚvation de jeton par dÚfaut (1)
+	ID du processus crÚateurá:	0x470
+
+Le type dÆÚlÚvation du jeton indique le type de jeton qui a ÚtÚ attribuÚ au nouveau processus conformÚment Ó la stratÚgie de contr¶le du compte dÆutilisateur.
+
+Le type 1 est un jeton complet sans aucun privilÞge supprimÚ ni aucun groupe dÚsactivÚ. Un jeton complet est uniquement utilisÚ si le contr¶le du compte dÆutilisateur est dÚsactivÚ, ou si lÆutilisateur est le compte dÆadministrateur intÚgrÚ ou un compte de service.
+
+Le type 2 est un jeton aux droits ÚlevÚs sans aucun privilÞge supprimÚ ni aucun groupe dÚsactivÚ. Un jeton aux droits ÚlevÚs est utilisÚ lorsque le contr¶le de compte dÆutilisateur est activÚ et que lÆutilisateur choisit de dÚmarrer le programme en tant quÆadministrateur. Un jeton aux droits ÚlevÚs est Úgalement utilisÚ lorsquÆune application est configurÚe pour toujours exiger un privilÞge administratif ou pour toujours exiger les privilÞges maximum, et que lÆutilisateur est membre du groupe Administrateurs.
+
+Le type 3 est un jeton limitÚ dont les privilÞges administratifs sont supprimÚs et les groupes administratifs dÚsactivÚs. Le jeton limitÚ est utilisÚ lorsque le contr¶le de compte dÆ utilisateur est activÚ, que lÆapplication nÆexige pas le privilÞge administratif et que lÆutilisateur ne choisit pas de dÚmarrer le programme en tant quÆadministrateur.
+
+Event[17]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.698
+  Event ID: 4689
+  Task: Fin du processus
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+Un processus est terminÚ.
+
+Sujetá:
+	ID de sÚcuritÚá:		S-1-5-18
+	Nom du compteá:		CLI01$
+	Domaine du compteá:		WORKGROUP
+	ID dÆouverture de sessioná:		0x3e7
+
+Informations sur le processusá:
+	ID du processusá:	0x6a8
+	Nom du processusá:	C:\Windows\System32\PING.EXE
+	╔tat de finá:	0x0
+
+Event[18]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.698
+  Event ID: 5156
+  Task: Connexion de la plateforme de filtrage
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+La plateforme WPF (Windows Filtering Platform) a autorisÚ une connexion.
+
+Informations sur lÆapplicationá:
+	ID du processusá:		4
+	Nom de lÆapplicationá:	System
+
+Informations sur le rÚseauá:
+	Directioná:		Sortant
+	Adresse sourceá:		192.168.10.50
+	Port sourceá:		8
+	Adresse de destinationá:	192.168.10.1
+	Port de destinationá:		0
+	Protocoleá:		1
+
+Informations sur le filtreá:
+	ID dÆexÚcution du filtreá:	66977
+	Nom de la coucheá:		Connexion
+	ID dÆexÚcution de la coucheá:	48
+
+Event[19]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.683
+  Event ID: 4688
+  Task: CrÚation du processus
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+Un nouveau processus a ÚtÚ crÚÚ.
+
+Sujetá:
+	ID de sÚcuritÚá:		S-1-5-18
+	Nom du compteá:		CLI01$
+	Domaine du compteá:		WORKGROUP
+	ID dÆouverture de sessioná:		0x3e7
+
+Informations sur le processusá:
+	ID du nouveau processusá:		0x6a8
+	Nom du nouveau processusá:	C:\Windows\System32\PING.EXE
+	Type dÆÚlÚvation du jetoná:	Type dÆÚlÚvation de jeton par dÚfaut (1)
+	ID du processus crÚateurá:	0x470
+
+Le type dÆÚlÚvation du jeton indique le type de jeton qui a ÚtÚ attribuÚ au nouveau processus conformÚment Ó la stratÚgie de contr¶le du compte dÆutilisateur.
+
+Le type 1 est un jeton complet sans aucun privilÞge supprimÚ ni aucun groupe dÚsactivÚ. Un jeton complet est uniquement utilisÚ si le contr¶le du compte dÆutilisateur est dÚsactivÚ, ou si lÆutilisateur est le compte dÆadministrateur intÚgrÚ ou un compte de service.
+
+Le type 2 est un jeton aux droits ÚlevÚs sans aucun privilÞge supprimÚ ni aucun groupe dÚsactivÚ. Un jeton aux droits ÚlevÚs est utilisÚ lorsque le contr¶le de compte dÆutilisateur est activÚ et que lÆutilisateur choisit de dÚmarrer le programme en tant quÆadministrateur. Un jeton aux droits ÚlevÚs est Úgalement utilisÚ lorsquÆune application est configurÚe pour toujours exiger un privilÞge administratif ou pour toujours exiger les privilÞges maximum, et que lÆutilisateur est membre du groupe Administrateurs.
+
+Le type 3 est un jeton limitÚ dont les privilÞges administratifs sont supprimÚs et les groupes administratifs dÚsactivÚs. Le jeton limitÚ est utilisÚ lorsque le contr¶le de compte dÆ utilisateur est activÚ, que lÆapplication nÆexige pas le privilÞge administratif et que lÆutilisateur ne choisit pas de dÚmarrer le programme en tant quÆadministrateur.
+
+Event[20]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.683
+  Event ID: 4689
+  Task: Fin du processus
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+Un processus est terminÚ.
+
+Sujetá:
+	ID de sÚcuritÚá:		S-1-5-18
+	Nom du compteá:		CLI01$
+	Domaine du compteá:		WORKGROUP
+	ID dÆouverture de sessioná:		0x3e7
+
+Informations sur le processusá:
+	ID du processusá:	0x6c0
+	Nom du processusá:	C:\Windows\System32\ipconfig.exe
+	╔tat de finá:	0x0
+
+Event[21]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.651
+  Event ID: 4688
+  Task: CrÚation du processus
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+Un nouveau processus a ÚtÚ crÚÚ.
+
+Sujetá:
+	ID de sÚcuritÚá:		S-1-5-18
+	Nom du compteá:		CLI01$
+	Domaine du compteá:		WORKGROUP
+	ID dÆouverture de sessioná:		0x3e7
+
+Informations sur le processusá:
+	ID du nouveau processusá:		0x6c0
+	Nom du nouveau processusá:	C:\Windows\System32\ipconfig.exe
+	Type dÆÚlÚvation du jetoná:	Type dÆÚlÚvation de jeton par dÚfaut (1)
+	ID du processus crÚateurá:	0x470
+
+Le type dÆÚlÚvation du jeton indique le type de jeton qui a ÚtÚ attribuÚ au nouveau processus conformÚment Ó la stratÚgie de contr¶le du compte dÆutilisateur.
+
+Le type 1 est un jeton complet sans aucun privilÞge supprimÚ ni aucun groupe dÚsactivÚ. Un jeton complet est uniquement utilisÚ si le contr¶le du compte dÆutilisateur est dÚsactivÚ, ou si lÆutilisateur est le compte dÆadministrateur intÚgrÚ ou un compte de service.
+
+Le type 2 est un jeton aux droits ÚlevÚs sans aucun privilÞge supprimÚ ni aucun groupe dÚsactivÚ. Un jeton aux droits ÚlevÚs est utilisÚ lorsque le contr¶le de compte dÆutilisateur est activÚ et que lÆutilisateur choisit de dÚmarrer le programme en tant quÆadministrateur. Un jeton aux droits ÚlevÚs est Úgalement utilisÚ lorsquÆune application est configurÚe pour toujours exiger un privilÞge administratif ou pour toujours exiger les privilÞges maximum, et que lÆutilisateur est membre du groupe Administrateurs.
+
+Le type 3 est un jeton limitÚ dont les privilÞges administratifs sont supprimÚs et les groupes administratifs dÚsactivÚs. Le jeton limitÚ est utilisÚ lorsque le contr¶le de compte dÆ utilisateur est activÚ, que lÆapplication nÆexige pas le privilÞge administratif et que lÆutilisateur ne choisit pas de dÚmarrer le programme en tant quÆadministrateur.
+
+Event[22]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.651
+  Event ID: 4689
+  Task: Fin du processus
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+Un processus est terminÚ.
+
+Sujetá:
+	ID de sÚcuritÚá:		S-1-5-18
+	Nom du compteá:		CLI01$
+	Domaine du compteá:		WORKGROUP
+	ID dÆouverture de sessioná:		0x3e7
+
+Informations sur le processusá:
+	ID du processusá:	0x370
+	Nom du processusá:	C:\Windows\System32\net.exe
+	╔tat de finá:	0x2
+
+Event[23]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.651
+  Event ID: 4689
+  Task: Fin du processus
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+Un processus est terminÚ.
+
+Sujetá:
+	ID de sÚcuritÚá:		S-1-5-18
+	Nom du compteá:		CLI01$
+	Domaine du compteá:		WORKGROUP
+	ID dÆouverture de sessioná:		0x3e7
+
+Informations sur le processusá:
+	ID du processusá:	0x458
+	Nom du processusá:	C:\Windows\System32\net1.exe
+	╔tat de finá:	0x2
+
+Event[24]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.636
+  Event ID: 4688
+  Task: CrÚation du processus
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+Un nouveau processus a ÚtÚ crÚÚ.
+
+Sujetá:
+	ID de sÚcuritÚá:		S-1-5-18
+	Nom du compteá:		CLI01$
+	Domaine du compteá:		WORKGROUP
+	ID dÆouverture de sessioná:		0x3e7
+
+Informations sur le processusá:
+	ID du nouveau processusá:		0x458
+	Nom du nouveau processusá:	C:\Windows\System32\net1.exe
+	Type dÆÚlÚvation du jetoná:	Type dÆÚlÚvation de jeton par dÚfaut (1)
+	ID du processus crÚateurá:	0x370
+
+Le type dÆÚlÚvation du jeton indique le type de jeton qui a ÚtÚ attribuÚ au nouveau processus conformÚment Ó la stratÚgie de contr¶le du compte dÆutilisateur.
+
+Le type 1 est un jeton complet sans aucun privilÞge supprimÚ ni aucun groupe dÚsactivÚ. Un jeton complet est uniquement utilisÚ si le contr¶le du compte dÆutilisateur est dÚsactivÚ, ou si lÆutilisateur est le compte dÆadministrateur intÚgrÚ ou un compte de service.
+
+Le type 2 est un jeton aux droits ÚlevÚs sans aucun privilÞge supprimÚ ni aucun groupe dÚsactivÚ. Un jeton aux droits ÚlevÚs est utilisÚ lorsque le contr¶le de compte dÆutilisateur est activÚ et que lÆutilisateur choisit de dÚmarrer le programme en tant quÆadministrateur. Un jeton aux droits ÚlevÚs est Úgalement utilisÚ lorsquÆune application est configurÚe pour toujours exiger un privilÞge administratif ou pour toujours exiger les privilÞges maximum, et que lÆutilisateur est membre du groupe Administrateurs.
+
+Le type 3 est un jeton limitÚ dont les privilÞges administratifs sont supprimÚs et les groupes administratifs dÚsactivÚs. Le jeton limitÚ est utilisÚ lorsque le contr¶le de compte dÆ utilisateur est activÚ, que lÆapplication nÆexige pas le privilÞge administratif et que lÆutilisateur ne choisit pas de dÚmarrer le programme en tant quÆadministrateur.
+
+Event[25]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.636
+  Event ID: 4688
+  Task: CrÚation du processus
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+Un nouveau processus a ÚtÚ crÚÚ.
+
+Sujetá:
+	ID de sÚcuritÚá:		S-1-5-18
+	Nom du compteá:		CLI01$
+	Domaine du compteá:		WORKGROUP
+	ID dÆouverture de sessioná:		0x3e7
+
+Informations sur le processusá:
+	ID du nouveau processusá:		0x370
+	Nom du nouveau processusá:	C:\Windows\System32\net.exe
+	Type dÆÚlÚvation du jetoná:	Type dÆÚlÚvation de jeton par dÚfaut (1)
+	ID du processus crÚateurá:	0x470
+
+Le type dÆÚlÚvation du jeton indique le type de jeton qui a ÚtÚ attribuÚ au nouveau processus conformÚment Ó la stratÚgie de contr¶le du compte dÆutilisateur.
+
+Le type 1 est un jeton complet sans aucun privilÞge supprimÚ ni aucun groupe dÚsactivÚ. Un jeton complet est uniquement utilisÚ si le contr¶le du compte dÆutilisateur est dÚsactivÚ, ou si lÆutilisateur est le compte dÆadministrateur intÚgrÚ ou un compte de service.
+
+Le type 2 est un jeton aux droits ÚlevÚs sans aucun privilÞge supprimÚ ni aucun groupe dÚsactivÚ. Un jeton aux droits ÚlevÚs est utilisÚ lorsque le contr¶le de compte dÆutilisateur est activÚ et que lÆutilisateur choisit de dÚmarrer le programme en tant quÆadministrateur. Un jeton aux droits ÚlevÚs est Úgalement utilisÚ lorsquÆune application est configurÚe pour toujours exiger un privilÞge administratif ou pour toujours exiger les privilÞges maximum, et que lÆutilisateur est membre du groupe Administrateurs.
+
+Le type 3 est un jeton limitÚ dont les privilÞges administratifs sont supprimÚs et les groupes administratifs dÚsactivÚs. Le jeton limitÚ est utilisÚ lorsque le contr¶le de compte dÆ utilisateur est activÚ, que lÆapplication nÆexige pas le privilÞge administratif et que lÆutilisateur ne choisit pas de dÚmarrer le programme en tant quÆadministrateur.
+
+Event[26]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.636
+  Event ID: 4689
+  Task: Fin du processus
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+Un processus est terminÚ.
+
+Sujetá:
+	ID de sÚcuritÚá:		S-1-5-18
+	Nom du compteá:		CLI01$
+	Domaine du compteá:		WORKGROUP
+	ID dÆouverture de sessioná:		0x3e7
+
+Informations sur le processusá:
+	ID du processusá:	0x45c
+	Nom du processusá:	C:\Windows\System32\net.exe
+	╔tat de finá:	0x1
+
+Event[27]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.636
+  Event ID: 4689
+  Task: Fin du processus
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+Un processus est terminÚ.
+
+Sujetá:
+	ID de sÚcuritÚá:		S-1-5-18
+	Nom du compteá:		CLI01$
+	Domaine du compteá:		WORKGROUP
+	ID dÆouverture de sessioná:		0x3e7
+
+Informations sur le processusá:
+	ID du processusá:	0x48c
+	Nom du processusá:	C:\Windows\System32\net1.exe
+	╔tat de finá:	0x1
+
+Event[28]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.620
+  Event ID: 4688
+  Task: CrÚation du processus
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+Un nouveau processus a ÚtÚ crÚÚ.
+
+Sujetá:
+	ID de sÚcuritÚá:		S-1-5-18
+	Nom du compteá:		CLI01$
+	Domaine du compteá:		WORKGROUP
+	ID dÆouverture de sessioná:		0x3e7
+
+Informations sur le processusá:
+	ID du nouveau processusá:		0x48c
+	Nom du nouveau processusá:	C:\Windows\System32\net1.exe
+	Type dÆÚlÚvation du jetoná:	Type dÆÚlÚvation de jeton par dÚfaut (1)
+	ID du processus crÚateurá:	0x45c
+
+Le type dÆÚlÚvation du jeton indique le type de jeton qui a ÚtÚ attribuÚ au nouveau processus conformÚment Ó la stratÚgie de contr¶le du compte dÆutilisateur.
+
+Le type 1 est un jeton complet sans aucun privilÞge supprimÚ ni aucun groupe dÚsactivÚ. Un jeton complet est uniquement utilisÚ si le contr¶le du compte dÆutilisateur est dÚsactivÚ, ou si lÆutilisateur est le compte dÆadministrateur intÚgrÚ ou un compte de service.
+
+Le type 2 est un jeton aux droits ÚlevÚs sans aucun privilÞge supprimÚ ni aucun groupe dÚsactivÚ. Un jeton aux droits ÚlevÚs est utilisÚ lorsque le contr¶le de compte dÆutilisateur est activÚ et que lÆutilisateur choisit de dÚmarrer le programme en tant quÆadministrateur. Un jeton aux droits ÚlevÚs est Úgalement utilisÚ lorsquÆune application est configurÚe pour toujours exiger un privilÞge administratif ou pour toujours exiger les privilÞges maximum, et que lÆutilisateur est membre du groupe Administrateurs.
+
+Le type 3 est un jeton limitÚ dont les privilÞges administratifs sont supprimÚs et les groupes administratifs dÚsactivÚs. Le jeton limitÚ est utilisÚ lorsque le contr¶le de compte dÆ utilisateur est activÚ, que lÆapplication nÆexige pas le privilÞge administratif et que lÆutilisateur ne choisit pas de dÚmarrer le programme en tant quÆadministrateur.
+
+Event[29]:
+  Log Name: Security
+  Source: Microsoft-Windows-Security-Auditing
+  Date: 2026-11-19T13:51:37.620
+  Event ID: 4688
+  Task: CrÚation du processus
+  Level: Information
+  Opcode: Informations
+  Keyword: SuccÞs de lÆaudit
+  User: N/A
+  User Name: N/A
+  Computer: CLI01
+  Description: 
+Un nouveau processus a ÚtÚ crÚÚ.
+
+Sujetá:
+	ID de sÚcuritÚá:		S-1-5-18
+	Nom du compteá:		CLI01$
+	Domaine du compteá:		WORKGROUP
+	ID dÆouverture de sessioná:		0x3e7
+
+Informations sur le processusá:
+	ID du nouveau processusá:		0x45c
+	Nom du nouveau processusá:	C:\Windows\System32\net.exe
+	Type dÆÚlÚvation du jetoná:	Type dÆÚlÚvation de jeton par dÚfaut (1)
+	ID du processus crÚateurá:	0x470
+
+Le type dÆÚlÚvation du jeton indique le type de jeton qui a ÚtÚ attribuÚ au nouveau processus conformÚment Ó la stratÚgie de contr¶le du compte dÆutilisateur.
+
+Le type 1 est un jeton complet sans aucun privilÞge supprimÚ ni aucun groupe dÚsactivÚ. Un jeton complet est uniquement utilisÚ si le contr¶le du compte dÆutilisateur est dÚsactivÚ, ou si lÆutilisateur est le compte dÆadministrateur intÚgrÚ ou un compte de service.
+
+Le type 2 est un jeton aux droits ÚlevÚs sans aucun privilÞge supprimÚ ni aucun groupe dÚsactivÚ. Un jeton aux droits ÚlevÚs est utilisÚ lorsque le contr¶le de compte dÆutilisateur est activÚ et que lÆutilisateur choisit de dÚmarrer le programme en tant quÆadministrateur. Un jeton aux droits ÚlevÚs est Úgalement utilisÚ lorsquÆune application est configurÚe pour toujours exiger un privilÞge administratif ou pour toujours exiger les privilÞges maximum, et que lÆutilisateur est membre du groupe Administrateurs.
+
+Le type 3 est un jeton limitÚ dont les privilÞges administratifs sont supprimÚs et les groupes administratifs dÚsactivÚs. Le jeton limitÚ est utilisÚ lorsque le contr¶le de compte dÆ utilisateur est activÚ, que lÆapplication nÆexige pas le privilÞge administratif et que lÆutilisateur ne choisit pas de dÚmarrer le programme en tant quÆadministrateur.
+

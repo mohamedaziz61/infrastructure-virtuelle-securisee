@@ -1,0 +1,53 @@
+
+Paramètres Profil de domaine : 
+----------------------------------------------------------------------
+État                                  Actif
+Stratégie de pare-feu                 BlockInbound,AllowOutbound
+LocalFirewallRules                    N/A (magasin d'objets de stratégie de groupe uniquement)
+LocalConSecRules                      N/A (magasin d'objets de stratégie de groupe uniquement)
+InboundUserNotification               Activer
+RemoteManagement                      Désactiver
+UnicastResponseToMulticast            Activer
+
+Journalisation :
+LogAllowedConnections                 Désactiver
+LogDroppedConnections                 Activer
+FileName                              %systemroot%\system32\LogFiles\Firewall\pfirewall.log
+MaxFileSize                           4096
+
+
+Paramètres Profil privé : 
+----------------------------------------------------------------------
+État                                  Actif
+Stratégie de pare-feu                 BlockInbound,AllowOutbound
+LocalFirewallRules                    N/A (magasin d'objets de stratégie de groupe uniquement)
+LocalConSecRules                      N/A (magasin d'objets de stratégie de groupe uniquement)
+InboundUserNotification               Activer
+RemoteManagement                      Désactiver
+UnicastResponseToMulticast            Activer
+
+Journalisation :
+LogAllowedConnections                 Désactiver
+LogDroppedConnections                 Activer
+FileName                              %systemroot%\system32\LogFiles\Firewall\pfirewall.log
+MaxFileSize                           4096
+
+
+Paramètres Profil public : 
+----------------------------------------------------------------------
+État                                  Actif
+Stratégie de pare-feu                 BlockInbound,AllowOutbound
+LocalFirewallRules                    N/A (magasin d'objets de stratégie de groupe uniquement)
+LocalConSecRules                      N/A (magasin d'objets de stratégie de groupe uniquement)
+InboundUserNotification               Activer
+RemoteManagement                      Désactiver
+UnicastResponseToMulticast            Activer
+
+Journalisation :
+LogAllowedConnections                 Désactiver
+LogDroppedConnections                 Activer
+FileName                              %systemroot%\system32\LogFiles\Firewall\pfirewall.log
+MaxFileSize                           4096
+
+Ok.
+

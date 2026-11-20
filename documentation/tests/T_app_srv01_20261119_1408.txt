@@ -1,0 +1,25 @@
+=== App tests on srv01 (from admin host 192.168.99.10 via pfSense) 2026-11-19T14:08:30+01:00
+--- A1 health
+{"db":"ok","status":"ok"}
+ HTTP 200
+--- A2 write
+POST fw01-pfsense HTTP 303
+POST srv01-ubuntu HTTP 303
+POST cli01-win7 HTTP 303
+labapp_assets_total 3
+--- A3 crash -> restart policy
+state=running health=healthy restarts=2
+--- A4 persistence: compose down + up (volume kept)
+labapp_db_data
+labapp_assets_total 3
+cli01-win7
+--- A5 DB not reachable from network
+5432 BLOCKED (PASS)
+--- A6 Prometheus not exposed on network
+9090 BLOCKED (PASS)
+--- A7 Grafana reachable from MGMT (login page, no auth)
+HTTP 200
+API without auth: HTTP 401 (expect 401)
+--- A8 container hardening
+/labapp-web-1 user=10001 ro=true capdrop=[ALL] nnp=[no-new-privileges:true]
+backend internal=true

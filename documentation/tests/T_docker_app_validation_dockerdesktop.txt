@@ -1,0 +1,23 @@
+=== Docker app validation on Docker Desktop (pre-deployment) 2026-11-19T11:24:43+01:00
+--- T1 health
+{"db":"ok","status":"ok"}
+ HTTP 200
+--- T2 insert asset
+POST HTTP 303
+# TYPE labapp_assets_total gauge
+labapp_assets_total 1
+--- T3 kill web process -> restart policy
+restart policy=unless-stopped state=exited
+  note: docker kill counts as a manual stop; testing crash restart instead:
+state=running restarts=1
+--- T4 persistence: down (keep volume) + up
+# TYPE labapp_assets_total gauge
+labapp_assets_total 1
+switch-core-01
+--- T5 network isolation: db on internal network, no published port
+labapp-test_backend  ports=map[5432/tcp:[]]
+backend internal=true
+db egress: BLOCKED
+--- T6 hardening
+web user=10001 readonly=true capdrop=[ALL] secopt=[no-new-privileges:true]
+touch: cannot touch '/srv/x': Read-only file system

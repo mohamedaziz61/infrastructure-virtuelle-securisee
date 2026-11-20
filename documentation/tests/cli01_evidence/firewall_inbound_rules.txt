@@ -1,0 +1,2432 @@
+
+Nom de la règle :                     windows_exporter from srv01
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          
+LocalIP :                             Tout
+RemoteIP :                            192.168.20.10/32
+Protocole :                           TCP
+LocalPort :                           9182
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     windows_exporter from srv01
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          
+LocalIP :                             Tout
+RemoteIP :                            192.168.20.10/32
+Protocole :                           TCP
+LocalPort :                           9182
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     windows_exporter (HTTP 9182)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           9182
+RemotePort :                          Tout
+Traversée latérale :                  Oui
+Action :                              Autoriser
+
+Nom de la règle :                     ICMP from gateway
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          
+LocalIP :                             Tout
+RemoteIP :                            192.168.10.1/32
+Protocole :                           ICMPv4
+                                      Type    Code
+                                      Tout    Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service Gestionnaire de clés (TCP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Service Gestion des clés
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           1688
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service Gestionnaire de clés (TCP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Service Gestion des clés
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           1688
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Serveur de cache hébergé de BranchCache (HTTP-In)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          BranchCache - Serveur de cache hébergé (utilise HTTPS)
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           443
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte d'homologue de BranchCache (WSD-In)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          BranchCache - Découverte d'homologue (utilise WSD)
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           3702
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Extraction du contenu de BranchCache (HTTP-In)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          BranchCache - Extraction du contenu (utilise HTTP)
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           80
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Bureau à distance (TCP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Bureau à distance
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           3389
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Connexion à un projecteur réseau (WSD EventsSecure-In)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Connexion à un projecteur réseau
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           5358
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Connexion à un projecteur réseau (WSD Events-In)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Connexion à un projecteur réseau
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           5357
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Connexion à un projecteur réseau (TCP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Connexion à un projecteur réseau
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Connexion à un projecteur réseau (WSD-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Connexion à un projecteur réseau
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           3702
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Connexion à un projecteur réseau (WSD EventsSecure-In)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Connexion à un projecteur réseau
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           5358
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Connexion à un projecteur réseau (WSD Events-In)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Connexion à un projecteur réseau
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           5357
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Connexion à un projecteur réseau (TCP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Connexion à un projecteur réseau
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Périphériques mobiles sans fil (UPnP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Périphériques mobiles sans fil
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           2869
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Périphériques mobiles sans fil (SSDP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Périphériques mobiles sans fil
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           1900
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Unités Media Center Extender - Diffusion en continu de contenu multimédia (TCP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Unités Media Center Extender
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           2869
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Unités Media Center Extender - WMDRM-ND/RTP/RTCP (UDP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Unités Media Center Extender
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           7777,7778,7779,7780,7781,5004,5005,50004,50005,50006,50007,50008,50009,50010,50011,50012,50013
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Unités Media Center Extender - XSP (TCP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Unités Media Center Extender
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           3390
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Unités Media Center Extender - Diffusion en continu HTTP (TCP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Unités Media Center Extender
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           10244
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Unités Media Center Extender - qWave (TCP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Unités Media Center Extender
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           2177
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Unités Media Center Extender - qWave (UDP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Unités Media Center Extender
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           2177
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Unités Media Center Extender - RSTP (TCP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Unités Media Center Extender
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           554,8554,8555,8556,8557,8558
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Unités Media Center Extender - SSDP (UDP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Unités Media Center Extender
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           1900
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Assistance à distance (PNRP-Entrant)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé
+Groupement :                          Assistance à distance
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           UDP
+LocalPort :                           3540
+RemotePort :                          Tout
+Traversée latérale :                  Déférer à l'application
+Action :                              Autoriser
+
+Nom de la règle :                     Assistance à distance (SSDP TCP - en entrée)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé
+Groupement :                          Assistance à distance
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           2869
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Assistance à distance (SSDP UDP - en entrée)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé
+Groupement :                          Assistance à distance
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           1900
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Assistance à distance (TCP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé
+Groupement :                          Assistance à distance
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Déférer à l'application
+Action :                              Autoriser
+
+Nom de la règle :                     Assistance à distance (DCOM-In)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Assistance à distance
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           135
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Assistance à distance (Trafic entrant TCP sur le serveur d'Assistance à distance)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Assistance à distance
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Assistance à distance (PNRP-Entrant)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Public
+Groupement :                          Assistance à distance
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           UDP
+LocalPort :                           3540
+RemotePort :                          Tout
+Traversée latérale :                  Déférer à l'application
+Action :                              Autoriser
+
+Nom de la règle :                     Assistance à distance (TCP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Public
+Groupement :                          Assistance à distance
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Déférer à l'application
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion à distance du Pare-feu Windows (RPC-EPMAP)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Gestion à distance du Pare-feu Windows
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           RPC-EPMap
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion à distance du Pare-feu Windows (RPC)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Gestion à distance du Pare-feu Windows
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           RPC
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion à distance du Pare-feu Windows (RPC-EPMAP)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Gestion à distance du Pare-feu Windows
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           RPC-EPMap
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion à distance du Pare-feu Windows (RPC)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Gestion à distance du Pare-feu Windows
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           RPC
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion à distance de Windows - Mode de compatibilité (HTTP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Gestion à distance de Windows
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           80
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion à distance de Windows - Mode de compatibilité (HTTP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Gestion à distance de Windows
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           80
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion à distance de Windows (HTTP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Gestion à distance de Windows
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           5985
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion à distance de Windows (HTTP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Gestion à distance de Windows
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           5985
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion à distance des journaux des événements (RPC-EPMAP)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Gestion à distance des journaux des événements
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           RPC-EPMap
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion à distance des journaux des événements (NP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Gestion à distance des journaux des événements
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           445
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion à distance des journaux des événements (RPC)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Gestion à distance des journaux des événements
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           RPC
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion à distance des journaux des événements (RPC-EPMAP)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Gestion à distance des journaux des événements
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           RPC-EPMap
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion à distance des journaux des événements (NP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Gestion à distance des journaux des événements
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           445
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion à distance des journaux des événements (RPC)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Gestion à distance des journaux des événements
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           RPC
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Coordinateur de transactions distribuées (RPC-EPMAP)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Coordinateur de transactions distribuées
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           RPC-EPMap
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Coordinateur de transactions distribuées (RPC)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Coordinateur de transactions distribuées
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           RPC
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Coordinateur de transactions distribuées (TCP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Coordinateur de transactions distribuées
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Coordinateur de transactions distribuées (RPC-EPMAP)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Coordinateur de transactions distribuées
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           RPC-EPMap
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Coordinateur de transactions distribuées (RPC)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Coordinateur de transactions distribuées
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           RPC
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Coordinateur de transactions distribuées (TCP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Coordinateur de transactions distribuées
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion à distance des tâches planifiées (RPC-EPMAP)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Gestion à distance des tâches planifiées
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           RPC-EPMap
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion à distance des tâches planifiées (RPC)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Gestion à distance des tâches planifiées
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           RPC
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion à distance des tâches planifiées (RPC-EPMAP)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Gestion à distance des tâches planifiées
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           RPC-EPMap
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion à distance des tâches planifiées (RPC)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Gestion à distance des tâches planifiées
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           RPC
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion des services à distance (RPC-EPMAP)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Gestion des services à distance
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           RPC-EPMap
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion des services à distance (NP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Gestion des services à distance
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           445
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion des services à distance (RPC)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Gestion des services à distance
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           RPC
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion des services à distance (RPC-EPMAP)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Gestion des services à distance
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           RPC-EPMap
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion des services à distance (NP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Gestion des services à distance
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           445
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion des services à distance (RPC)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Gestion des services à distance
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           RPC
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte du réseau (Événements WSD-Trafic entrant)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Public
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           5357
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte du réseau (WSD EventsSecure-In)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Public
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           5358
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte du réseau (Pub-WSD-In)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Public
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           3702
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte de réseau (LLMNR-UDP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Public
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           5355
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte de réseau (WSD-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Public
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           3702
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte de réseau (NB-Datagramme-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Public
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           138
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte de réseau (NB-Nom-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Public
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           137
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte de réseau (UPnP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Public
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           2869
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte de réseau (SSDP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Public
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           1900
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte du réseau (Événements WSD-Trafic entrant)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Privé
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           5357
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte du réseau (WSD EventsSecure-In)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Privé
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           5358
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte du réseau (Pub-WSD-In)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Privé
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           3702
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte de réseau (LLMNR-UDP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Privé
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           5355
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte de réseau (WSD-Entrée)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Privé
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           3702
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte de réseau (NB-Datagramme-Entrée)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Privé
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           138
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte de réseau (NB-Nom-Entrée)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Privé
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           137
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte de réseau (UPnP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Privé
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           2869
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte de réseau (SSDP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Privé
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           1900
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte du réseau (Événements WSD-Trafic entrant)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           5357
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte du réseau (WSD EventsSecure-In)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           5358
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte de réseau (NB-Datagramme-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           UDP
+LocalPort :                           138
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte de réseau (NB-Nom-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           UDP
+LocalPort :                           137
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Découverte de réseau (UPnP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Recherche du réseau
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           2869
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Routage et accès distant (PPTP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Routage et accès distant
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           1723
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Routage et accès distant (L2TP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Routage et accès distant
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           UDP
+LocalPort :                           1701
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Routage et accès distant (GRE-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Routage et accès distant
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           47
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Windows Management Instrumentation (ASync-In)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Infrastructure de gestion Windows (WMI)
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Windows Management Instrumentation (WMI-In)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Infrastructure de gestion Windows (WMI)
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Windows Management Instrumentation (DCOM-In)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Infrastructure de gestion Windows (WMI)
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           135
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Windows Management Instrumentation (ASync-In)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Infrastructure de gestion Windows (WMI)
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Windows Management Instrumentation (WMI-In)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Infrastructure de gestion Windows (WMI)
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Windows Management Instrumentation (DCOM-In)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Infrastructure de gestion Windows (WMI)
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           135
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service iSCSI (TCP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Service iSCSI
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service iSCSI (TCP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Service iSCSI
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Journaux et alertes de performance (DCOM entrant)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Journaux et alertes de performance
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           135
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Journaux et alertes de performance (TCP entrant)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Journaux et alertes de performance
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Journaux et alertes de performance (DCOM entrant)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Journaux et alertes de performance
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           135
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Journaux et alertes de performance (TCP entrant)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Journaux et alertes de performance
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion réseau de base - IPv6 (Trafic entrant IPv6)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Réseau de base
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           41
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Réseau de base - IPHTTPS (TCP-Entrant)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Réseau de base
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           IPHTTPS
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion réseau de base - Teredo (Trafic entrant UDP)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Réseau de base
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           UDP
+LocalPort :                           Teredo
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Réseau de base - Protocole DHCP pour IPv6 (DHCPV6-In)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Réseau de base
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           UDP
+LocalPort :                           546
+RemotePort :                          547
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Réseau de base - Protocole DHCP (DHCP-In)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Réseau de base
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           UDP
+LocalPort :                           68
+RemotePort :                          67
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion réseau de base - Internet Group Management Protocol (Trafic entrant IGMP)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Réseau de base
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           2
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion réseau de base - Destination inaccessible Fragmentation nécessaire (Trafic entrant ICMPv4)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Réseau de base
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           ICMPv4
+                                      Type    Code
+                                      3       4   
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Réseau de base - Écouteur de multidiffusion terminé (ICMPv6 entrant)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Réseau de base
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           ICMPv6
+                                      Type    Code
+                                      132     Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Réseau de base - Rapport d'écouteur de multidiffusion v2 (ICMPv6 entrant)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Réseau de base
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           ICMPv6
+                                      Type    Code
+                                      143     Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Réseau de base - Rapport d'écouteur de multidiffusion (ICMPv6 entrant)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Réseau de base
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           ICMPv6
+                                      Type    Code
+                                      131     Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Réseau de base - Requête d'écouteur de multidiffusion (ICMPv6 entrant)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Réseau de base
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           ICMPv6
+                                      Type    Code
+                                      130     Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Réseau de base - Sollicitation de routeur (ICMPv6-Entrant)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Réseau de base
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           ICMPv6
+                                      Type    Code
+                                      133     Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Réseau de base - Publication de routage (ICMPv6 entrant)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Réseau de base
+LocalIP :                             Tout
+RemoteIP :                            fe80::/64
+Protocole :                           ICMPv6
+                                      Type    Code
+                                      134     Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Réseau de base - Publication de découverte de voisin (ICMPv6 entrant)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Réseau de base
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           ICMPv6
+                                      Type    Code
+                                      136     Tout
+Traversée latérale :                  Oui
+Action :                              Autoriser
+
+Nom de la règle :                     Réseau de base - Sollicitation de découverte de voisin (ICMPv6 entrant)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Réseau de base
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           ICMPv6
+                                      Type    Code
+                                      135     Tout
+Traversée latérale :                  Oui
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion réseau de base - problème de paramètres (ICMPv6 entrant)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Réseau de base
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           ICMPv6
+                                      Type    Code
+                                      4       Tout
+Traversée latérale :                  Oui
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion réseau de base - temps dépassé (ICMPv6 entrant)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Réseau de base
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           ICMPv6
+                                      Type    Code
+                                      3       Tout
+Traversée latérale :                  Oui
+Action :                              Autoriser
+
+Nom de la règle :                     Réseau de base - Paquet trop important (ICMPv6 entrant)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Réseau de base
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           ICMPv6
+                                      Type    Code
+                                      2       Tout
+Traversée latérale :                  Oui
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion réseau de base - Destination inaccessible (ICMPv6 entrant)
+----------------------------------------------------------------------
+Activé :                              Oui
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Réseau de base
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           ICMPv6
+                                      Type    Code
+                                      1       Tout
+Traversée latérale :                  Oui
+Action :                              Autoriser
+
+Nom de la règle :                     Partage de fichiers et d'imprimantes (LLMNR-UDP-In)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Partage de fichiers et d'imprimantes
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           5355
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Partage de fichiers et d'imprimantes (Demande d'écho - ICMPv6 entrant)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Partage de fichiers et d'imprimantes
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           ICMPv6
+                                      Type    Code
+                                      128     Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Partage de fichiers et d'imprimantes (Demande d'écho - Trafic entrant ICMPv4)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Partage de fichiers et d'imprimantes
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           ICMPv4
+                                      Type    Code
+                                      8       Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Partage de fichiers et d'imprimantes (Service Spouleur - RPC-EPMAP)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Partage de fichiers et d'imprimantes
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           RPC-EPMap
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Partage de fichiers et d'imprimantes (service Spouleur - RPC)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Partage de fichiers et d'imprimantes
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           RPC
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Partage de fichiers et d'imprimantes (NB-Datagramme-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Partage de fichiers et d'imprimantes
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           138
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Partage de fichiers et d'imprimantes (NB-Nom-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Partage de fichiers et d'imprimantes
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           137
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Partage de fichiers et d'imprimantes (SMB-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Partage de fichiers et d'imprimantes
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           445
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Partage de fichiers et d'imprimantes (NB-Session-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Partage de fichiers et d'imprimantes
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           139
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Partage de fichiers et d'imprimantes (Demande d'écho - ICMPv6 entrant)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Partage de fichiers et d'imprimantes
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           ICMPv6
+                                      Type    Code
+                                      128     Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Partage de fichiers et d'imprimantes (Demande d'écho - Trafic entrant ICMPv4)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Partage de fichiers et d'imprimantes
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           ICMPv4
+                                      Type    Code
+                                      8       Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Partage de fichiers et d'imprimantes (Service Spouleur - RPC-EPMAP)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Partage de fichiers et d'imprimantes
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           RPC-EPMap
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Partage de fichiers et d'imprimantes (service Spouleur - RPC)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Partage de fichiers et d'imprimantes
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           RPC
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Partage de fichiers et d'imprimantes (NB-Datagramme-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Partage de fichiers et d'imprimantes
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           UDP
+LocalPort :                           138
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Partage de fichiers et d'imprimantes (NB-Nom-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Partage de fichiers et d'imprimantes
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           UDP
+LocalPort :                           137
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Partage de fichiers et d'imprimantes (SMB-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Partage de fichiers et d'imprimantes
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           445
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Partage de fichiers et d'imprimantes (NB-Session-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Partage de fichiers et d'imprimantes
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           139
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Windows Peer to Peer Collaboration Foundation (SSDP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Windows Peer to Peer Collaboration Foundation
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           1900
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Windows Peer to Peer Collaboration Foundation (PNRP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Windows Peer to Peer Collaboration Foundation
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           UDP
+LocalPort :                           3540
+RemotePort :                          Tout
+Traversée latérale :                  Déférer à l'application
+Action :                              Autoriser
+
+Nom de la règle :                     Windows Peer to Peer Collaboration Foundation (WSD-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Windows Peer to Peer Collaboration Foundation
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           3702
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Windows Peer to Peer Collaboration Foundation (TCP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Windows Peer to Peer Collaboration Foundation
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Déférer à l'application
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion des volumes à distance (RPC-EPMAP)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Gestion des volumes à distance
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           RPC-EPMap
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion des volumes à distance - Chargeur du service de disque virtuel (RPC)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Gestion des volumes à distance
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           RPC
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion des volumes à distance - Service de disque virtuel (RPC)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Gestion des volumes à distance
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           RPC
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion des volumes à distance (RPC-EPMAP)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Gestion des volumes à distance
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           RPC-EPMap
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion des volumes à distance - Chargeur du service de disque virtuel (RPC)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Gestion des volumes à distance
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           RPC
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Gestion des volumes à distance - Service de disque virtuel (RPC)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Gestion des volumes à distance
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           RPC
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service d'inscription de nom d'ordinateur Espace de collaboration Windows (SSDP-In)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Service d'inscription de nom d'ordinateur Espace de collaboration Windows
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           1900
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service d'inscription de nom d'ordinateur Espace de collaboration Windows (PNRP-In)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Service d'inscription de nom d'ordinateur Espace de collaboration Windows
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           UDP
+LocalPort :                           3540
+RemotePort :                          Tout
+Traversée latérale :                  Déférer à l'application
+Action :                              Autoriser
+
+Nom de la règle :                     Groupement résidentiel entrant (PNRP)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé
+Groupement :                          Groupe résidentiel
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           3540
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Groupe résidentiel entrant
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé
+Groupement :                          Groupe résidentiel
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           3587
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service de partage réseau du Lecteur Windows Media (HTTP-Diffusion en continu-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé
+Groupement :                          Service de partage réseau du Lecteur Windows Media (Internet)
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           10245
+RemotePort :                          Tout
+Traversée latérale :                  Déférer à l'application
+Action :                              Autoriser
+
+Nom de la règle :                     Service de partage réseau du Lecteur Windows Media (TCP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Service de partage réseau du Lecteur Windows Media
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service de partage réseau du Lecteur Windows Media (UDP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Service de partage réseau du Lecteur Windows Media
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service de partage réseau du Lecteur Windows Media (Diffusion en continu-UDP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Service de partage réseau du Lecteur Windows Media
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service de partage réseau du Lecteur Windows Media (HTTP-Diffusion en continu-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Service de partage réseau du Lecteur Windows Media
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           10243
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service de partage réseau du Lecteur Windows Media (UPnP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Service de partage réseau du Lecteur Windows Media
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           2869
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service de partage réseau du Lecteur Windows Media (SSDP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Service de partage réseau du Lecteur Windows Media
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           1900
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service de partage réseau du Lecteur Windows Media (qWave-TCP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Service de partage réseau du Lecteur Windows Media
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           TCP
+LocalPort :                           2177
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service de partage réseau du Lecteur Windows Media (qWave-UDP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Service de partage réseau du Lecteur Windows Media
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           2177
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service de partage réseau du Lecteur Windows Media (TCP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Service de partage réseau du Lecteur Windows Media
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service de partage réseau du Lecteur Windows Media (UDP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Service de partage réseau du Lecteur Windows Media
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           UDP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service de partage réseau du Lecteur Windows Media (Diffusion en continu-UDP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Service de partage réseau du Lecteur Windows Media
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           UDP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service de partage réseau du Lecteur Windows Media (HTTP-Diffusion en continu-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Service de partage réseau du Lecteur Windows Media
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           10243
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service de partage réseau du Lecteur Windows Media (qWave-TCP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Service de partage réseau du Lecteur Windows Media
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           2177
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service de partage réseau du Lecteur Windows Media (qWave-UDP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Service de partage réseau du Lecteur Windows Media
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           UDP
+LocalPort :                           2177
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Lecteur Windows Media (UDP-Entrée)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Lecteur Windows Media
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           UDP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Lecteur Windows Media x86 (Trafic entrant UDP)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Lecteur Windows Media
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           UDP
+LocalPort :                           Tout
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service d'interruption SNMP (UDP Entrant)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine
+Groupement :                          Interruption SNMP
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           UDP
+LocalPort :                           162
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service d'interruption SNMP (UDP Entrant)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Privé,Public
+Groupement :                          Interruption SNMP
+LocalIP :                             Tout
+RemoteIP :                            LocalSubnet
+Protocole :                           UDP
+LocalPort :                           162
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Service Accès réseau (NP-In)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Service Accès réseau
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           445
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+
+Nom de la règle :                     Protocole SSTP (SSTP-In)
+----------------------------------------------------------------------
+Activé :                              Non
+Direction :                           Actif
+Profiles :                            Domaine,Privé,Public
+Groupement :                          Protocole SSTP
+LocalIP :                             Tout
+RemoteIP :                            Tout
+Protocole :                           TCP
+LocalPort :                           443
+RemotePort :                          Tout
+Traversée latérale :                  Non
+Action :                              Autoriser
+Ok.
+

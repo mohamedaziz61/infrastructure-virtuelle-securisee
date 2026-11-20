@@ -1,0 +1,592 @@
+=== Verbose logging started: 19/11/2026  13:51:25  Build type: SHIP UNICODE 5.00.7600.00  Calling process: C:\Windows\system32\msiexec.exe ===
+MSI (c) (A8:C0) [13:51:25:622]: Resetting cached policy values
+MSI (c) (A8:C0) [13:51:25:622]: Machine policy value 'Debug' is 0
+MSI (c) (A8:C0) [13:51:25:622]: ******* RunEngine:
+           ******* Product: C:\lab\windows_exporter-0.18.1-amd64.msi
+           ******* Action: 
+           ******* CommandLine: **********
+MSI (c) (A8:C0) [13:51:25:622]: Client-side and UI is none or basic: Running entire install on the server.
+MSI (c) (A8:C0) [13:51:25:622]: Grabbed execution mutex.
+MSI (c) (A8:C0) [13:51:25:809]: Cloaking enabled.
+MSI (c) (A8:C0) [13:51:25:809]: Attempting to enable all disabled privileges before calling Install on Server
+MSI (c) (A8:C0) [13:51:25:825]: Incrementing counter to disable shutdown. Counter after increment: 0
+MSI (s) (78:8C) [13:51:25:840]: Running installation inside multi-package transaction C:\lab\windows_exporter-0.18.1-amd64.msi
+MSI (s) (78:8C) [13:51:25:840]: Grabbed execution mutex.
+MSI (s) (78:B0) [13:51:25:840]: Resetting cached policy values
+MSI (s) (78:B0) [13:51:25:840]: Machine policy value 'Debug' is 0
+MSI (s) (78:B0) [13:51:25:840]: ******* RunEngine:
+           ******* Product: C:\lab\windows_exporter-0.18.1-amd64.msi
+           ******* Action: 
+           ******* CommandLine: **********
+MSI (s) (78:B0) [13:51:25:840]: Machine policy value 'DisableUserInstalls' is 0
+MSI (s) (78:B0) [13:51:25:840]: Note: 1: 2203 2: C:\Windows\Installer\17fdb.ipi 3: -2147287038 
+MSI (s) (78:B0) [13:51:25:856]: SRSetRestorePoint skipped for this transaction.
+MSI (s) (78:B0) [13:51:25:856]: Note: 1: 1402 2: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer 3: 2 
+MSI (s) (78:B0) [13:51:25:856]: File will have security applied from OpCode.
+MSI (s) (78:B0) [13:51:25:918]: SOFTWARE RESTRICTION POLICY: Verifying package --> 'C:\lab\windows_exporter-0.18.1-amd64.msi' against software restriction policy
+MSI (s) (78:B0) [13:51:25:918]: Note: 1: 2262 2: DigitalSignature 3: -2147287038 
+MSI (s) (78:B0) [13:51:25:918]: SOFTWARE RESTRICTION POLICY: C:\lab\windows_exporter-0.18.1-amd64.msi is not digitally signed
+MSI (s) (78:B0) [13:51:25:918]: SOFTWARE RESTRICTION POLICY: C:\lab\windows_exporter-0.18.1-amd64.msi is permitted to run because the user token authorizes execution (system or service token).
+MSI (s) (78:B0) [13:51:25:918]: End dialog not enabled
+MSI (s) (78:B0) [13:51:25:918]: Original package ==> C:\lab\windows_exporter-0.18.1-amd64.msi
+MSI (s) (78:B0) [13:51:25:918]: Package we're running from ==> C:\Windows\Installer\183de.msi
+MSI (s) (78:B0) [13:51:25:918]: APPCOMPAT: Compatibility mode property overrides found.
+MSI (s) (78:B0) [13:51:25:918]: APPCOMPAT: looking for appcompat database entry with ProductCode '{F6DCD1DB-A703-47EA-BEFF-7064DD34C2FC}'.
+MSI (s) (78:B0) [13:51:25:918]: APPCOMPAT: no matching ProductCode found in database.
+MSI (s) (78:B0) [13:51:25:934]: MSCOREE not loaded loading copy from system32
+MSI (s) (78:B0) [13:51:25:949]: Machine policy value 'TransformsSecure' is 0
+MSI (s) (78:B0) [13:51:25:949]: User policy value 'TransformsAtSource' is 0
+MSI (s) (78:B0) [13:51:25:949]: Note: 1: 2205 2:  3: MsiFileHash 
+MSI (s) (78:B0) [13:51:25:949]: Machine policy value 'DisablePatch' is 0
+MSI (s) (78:B0) [13:51:25:949]: Machine policy value 'AllowLockdownPatch' is 0
+MSI (s) (78:B0) [13:51:25:949]: Machine policy value 'DisableLUAPatching' is 0
+MSI (s) (78:B0) [13:51:25:949]: Machine policy value 'DisableFlyWeightPatching' is 0
+MSI (s) (78:B0) [13:51:25:949]: APPCOMPAT: looking for appcompat database entry with ProductCode '{F6DCD1DB-A703-47EA-BEFF-7064DD34C2FC}'.
+MSI (s) (78:B0) [13:51:25:949]: APPCOMPAT: no matching ProductCode found in database.
+MSI (s) (78:B0) [13:51:25:949]: Transforms are not secure.
+MSI (s) (78:B0) [13:51:25:949]: Note: 1: 2205 2:  3: Control 
+MSI (s) (78:B0) [13:51:25:949]: PROPERTY CHANGE: Adding MsiLogFileLocation property. Its value is 'C:\lab\evidence\windows_exporter_msi.log'.
+MSI (s) (78:B0) [13:51:25:949]: Command Line: REBOOT=ReallySuppress ENABLED_COLLECTORS=cpu,cs,logical_disk,memory,net,os,service,system,tcp LISTEN_PORT=9182 CURRENTDIRECTORY=C:\Windows\system32 CLIENTUILEVEL=3 CLIENTPROCESSID=1704 
+MSI (s) (78:B0) [13:51:25:949]: PROPERTY CHANGE: Adding PackageCode property. Its value is '{14FB4FA1-4B4C-4065-96FA-84E8162AB2AF}'.
+MSI (s) (78:B0) [13:51:25:949]: Product Code passed to Engine.Initialize:           ''
+MSI (s) (78:B0) [13:51:25:949]: Product Code from property table before transforms: '{F6DCD1DB-A703-47EA-BEFF-7064DD34C2FC}'
+MSI (s) (78:B0) [13:51:25:949]: Product Code from property table after transforms:  '{F6DCD1DB-A703-47EA-BEFF-7064DD34C2FC}'
+MSI (s) (78:B0) [13:51:25:949]: Product not registered: beginning first-time install
+MSI (s) (78:B0) [13:51:25:949]: Product {F6DCD1DB-A703-47EA-BEFF-7064DD34C2FC} is not managed.
+MSI (s) (78:B0) [13:51:25:949]: MSI_LUA: Credential prompt not required, user is an admin
+MSI (s) (78:B0) [13:51:25:949]: PROPERTY CHANGE: Adding ProductState property. Its value is '-1'.
+MSI (s) (78:B0) [13:51:25:949]: Entering CMsiConfigurationManager::SetLastUsedSource.
+MSI (s) (78:B0) [13:51:25:949]: User policy value 'SearchOrder' is 'nmu'
+MSI (s) (78:B0) [13:51:25:949]: Adding new sources is allowed.
+MSI (s) (78:B0) [13:51:25:949]: PROPERTY CHANGE: Adding PackagecodeChanging property. Its value is '1'.
+MSI (s) (78:B0) [13:51:25:949]: Package name extracted from package path: 'windows_exporter-0.18.1-amd64.msi'
+MSI (s) (78:B0) [13:51:25:949]: Package to be registered: 'windows_exporter-0.18.1-amd64.msi'
+MSI (s) (78:B0) [13:51:25:965]: Note: 1: 2262 2: AdminProperties 3: -2147287038 
+MSI (s) (78:B0) [13:51:25:965]: Machine policy value 'DisableMsi' is 0
+MSI (s) (78:B0) [13:51:25:965]: Machine policy value 'AlwaysInstallElevated' is 0
+MSI (s) (78:B0) [13:51:25:965]: User policy value 'AlwaysInstallElevated' is 0
+MSI (s) (78:B0) [13:51:25:965]: Product installation will be elevated because user is admin and product is being installed per-machine.
+MSI (s) (78:B0) [13:51:25:965]: Running product '{F6DCD1DB-A703-47EA-BEFF-7064DD34C2FC}' with elevated privileges: Product is assigned.
+MSI (s) (78:B0) [13:51:25:965]: PROPERTY CHANGE: Adding REBOOT property. Its value is 'ReallySuppress'.
+MSI (s) (78:B0) [13:51:25:965]: PROPERTY CHANGE: Adding ENABLED_COLLECTORS property. Its value is 'cpu,cs,logical_disk,memory,net,os,service,system,tcp'.
+MSI (s) (78:B0) [13:51:25:965]: PROPERTY CHANGE: Adding LISTEN_PORT property. Its value is '9182'.
+MSI (s) (78:B0) [13:51:25:965]: PROPERTY CHANGE: Adding CURRENTDIRECTORY property. Its value is 'C:\Windows\system32'.
+MSI (s) (78:B0) [13:51:25:965]: PROPERTY CHANGE: Adding CLIENTUILEVEL property. Its value is '3'.
+MSI (s) (78:B0) [13:51:25:965]: PROPERTY CHANGE: Adding CLIENTPROCESSID property. Its value is '1704'.
+MSI (s) (78:B0) [13:51:25:965]: Machine policy value 'DisableAutomaticApplicationShutdown' is 0
+MSI (s) (78:B0) [13:51:25:965]: PROPERTY CHANGE: Adding MsiRestartManagerSessionKey property. Its value is 'dbcfd418007b5841b6d417705143e947'.
+MSI (s) (78:B0) [13:51:25:965]: RESTART MANAGER: Session opened.
+MSI (s) (78:B0) [13:51:25:965]: TRANSFORMS property is now: 
+MSI (s) (78:B0) [13:51:25:965]: PROPERTY CHANGE: Adding VersionDatabase property. Its value is '500'.
+MSI (s) (78:B0) [13:51:25:965]: SHELL32::SHGetFolderPath returned: C:\Windows\system32\config\systemprofile\AppData\Roaming
+MSI (s) (78:B0) [13:51:25:965]: SHELL32::SHGetFolderPath returned: C:\Windows\system32\config\systemprofile\Favorites
+MSI (s) (78:B0) [13:51:25:965]: SHELL32::SHGetFolderPath returned: C:\Windows\system32\config\systemprofile\AppData\Roaming\Microsoft\Windows\Network Shortcuts
+MSI (s) (78:B0) [13:51:25:965]: SHELL32::SHGetFolderPath returned: C:\Windows\system32\config\systemprofile\Documents
+MSI (s) (78:B0) [13:51:25:965]: SHELL32::SHGetFolderPath returned: C:\Windows\system32\config\systemprofile\AppData\Roaming\Microsoft\Windows\Printer Shortcuts
+MSI (s) (78:B0) [13:51:25:965]: SHELL32::SHGetFolderPath returned: C:\Windows\system32\config\systemprofile\AppData\Roaming\Microsoft\Windows\Recent
+MSI (s) (78:B0) [13:51:25:965]: SHELL32::SHGetFolderPath returned: C:\Windows\system32\config\systemprofile\AppData\Roaming\Microsoft\Windows\SendTo
+MSI (s) (78:B0) [13:51:25:965]: SHELL32::SHGetFolderPath returned: C:\Windows\system32\config\systemprofile\AppData\Roaming\Microsoft\Windows\Templates
+MSI (s) (78:B0) [13:51:25:965]: SHELL32::SHGetFolderPath returned: C:\ProgramData
+MSI (s) (78:B0) [13:51:25:981]: SHELL32::SHGetFolderPath returned: C:\Windows\system32\config\systemprofile\AppData\Local
+MSI (s) (78:B0) [13:51:25:981]: SHELL32::SHGetFolderPath returned: C:\Windows\system32\config\systemprofile\Pictures
+MSI (s) (78:B0) [13:51:25:981]: SHELL32::SHGetFolderPath returned: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools
+MSI (s) (78:B0) [13:51:25:981]: SHELL32::SHGetFolderPath returned: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup
+MSI (s) (78:B0) [13:51:25:981]: SHELL32::SHGetFolderPath returned: C:\ProgramData\Microsoft\Windows\Start Menu\Programs
+MSI (s) (78:B0) [13:51:25:981]: SHELL32::SHGetFolderPath returned: C:\ProgramData\Microsoft\Windows\Start Menu
+MSI (s) (78:B0) [13:51:25:981]: SHELL32::SHGetFolderPath returned: C:\Users\Public\Desktop
+MSI (s) (78:B0) [13:51:25:981]: SHELL32::SHGetFolderPath returned: C:\Windows\system32\config\systemprofile\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Administrative Tools
+MSI (s) (78:B0) [13:51:25:981]: SHELL32::SHGetFolderPath returned: C:\Windows\system32\config\systemprofile\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+MSI (s) (78:B0) [13:51:25:981]: SHELL32::SHGetFolderPath returned: C:\Windows\system32\config\systemprofile\AppData\Roaming\Microsoft\Windows\Start Menu\Programs
+MSI (s) (78:B0) [13:51:25:981]: SHELL32::SHGetFolderPath returned: C:\Windows\system32\config\systemprofile\AppData\Roaming\Microsoft\Windows\Start Menu
+MSI (s) (78:B0) [13:51:25:981]: SHELL32::SHGetFolderPath returned: C:\Windows\system32\config\systemprofile\Desktop
+MSI (s) (78:B0) [13:51:25:981]: SHELL32::SHGetFolderPath returned: C:\ProgramData\Microsoft\Windows\Templates
+MSI (s) (78:B0) [13:51:25:981]: SHELL32::SHGetFolderPath returned: C:\Windows\Fonts
+MSI (s) (78:B0) [13:51:25:981]: Note: 1: 2898 2: MS Sans Serif 3: MS Sans Serif 4: 0 5: 16 
+MSI (s) (78:B0) [13:51:25:981]: MSI_LUA: Setting MsiRunningElevated property to 1 because the install is already running elevated.
+MSI (s) (78:B0) [13:51:25:981]: PROPERTY CHANGE: Adding MsiRunningElevated property. Its value is '1'.
+MSI (s) (78:B0) [13:51:25:981]: PROPERTY CHANGE: Adding Privileged property. Its value is '1'.
+MSI (s) (78:B0) [13:51:25:981]: Note: 1: 1402 2: HKEY_CURRENT_USER\Software\Microsoft\MS Setup (ACME)\User Info 3: 2 
+MSI (s) (78:B0) [13:51:25:981]: PROPERTY CHANGE: Adding USERNAME property. Its value is 'Lab'.
+MSI (s) (78:B0) [13:51:25:981]: Note: 1: 1402 2: HKEY_CURRENT_USER\Software\Microsoft\MS Setup (ACME)\User Info 3: 2 
+MSI (s) (78:B0) [13:51:25:981]: PROPERTY CHANGE: Adding COMPANYNAME property. Its value is 'Projet Cloud'.
+MSI (s) (78:B0) [13:51:25:981]: PROPERTY CHANGE: Adding DATABASE property. Its value is 'C:\Windows\Installer\183de.msi'.
+MSI (s) (78:B0) [13:51:25:981]: PROPERTY CHANGE: Adding OriginalDatabase property. Its value is 'C:\lab\windows_exporter-0.18.1-amd64.msi'.
+MSI (s) (78:B0) [13:51:25:981]: Machine policy value 'MsiDisableEmbeddedUI' is 0
+MSI (s) (78:B0) [13:51:25:981]: EEUI - Disabling MsiEmbeddedUI for service because it's not a quiet/basic install
+MSI (s) (78:B0) [13:51:25:981]: Note: 1: 2205 2:  3: PatchPackage 
+MSI (s) (78:B0) [13:51:25:981]: Machine policy value 'DisableRollback' is 0
+MSI (s) (78:B0) [13:51:25:981]: User policy value 'DisableRollback' is 0
+MSI (s) (78:B0) [13:51:25:981]: PROPERTY CHANGE: Adding UILevel property. Its value is '2'.
+=== Logging started: 19/11/2026  13:51:25 ===
+MSI (s) (78:B0) [13:51:25:981]: Note: 1: 2203 2: C:\Windows\Installer\17fdb.ipi 3: -2147287038 
+MSI (s) (78:B0) [13:51:25:981]: PROPERTY CHANGE: Adding ACTION property. Its value is 'INSTALL'.
+MSI (s) (78:B0) [13:51:25:981]: Doing action: INSTALL
+Action start 13:51:25: INSTALL.
+MSI (s) (78:B0) [13:51:25:981]: Running ExecuteSequence
+MSI (s) (78:B0) [13:51:25:996]: Doing action: FindRelatedProducts
+Action start 13:51:25: FindRelatedProducts.
+MSI (s) (78:B0) [13:51:25:996]: Doing action: LaunchConditions
+Action ended 13:51:25: FindRelatedProducts. Return value 1.
+Action start 13:51:25: LaunchConditions.
+MSI (s) (78:B0) [13:51:25:996]: Doing action: ValidateProductID
+Action ended 13:51:25: LaunchConditions. Return value 1.
+Action start 13:51:25: ValidateProductID.
+MSI (s) (78:B0) [13:51:25:996]: Doing action: CostInitialize
+Action ended 13:51:25: ValidateProductID. Return value 1.
+MSI (s) (78:B0) [13:51:25:996]: Machine policy value 'MaxPatchCacheSize' is 10
+MSI (s) (78:B0) [13:51:25:996]: PROPERTY CHANGE: Adding ROOTDRIVE property. Its value is 'C:\'.
+MSI (s) (78:B0) [13:51:25:996]: PROPERTY CHANGE: Adding CostingComplete property. Its value is '0'.
+MSI (s) (78:B0) [13:51:25:996]: Note: 1: 2205 2:  3: Patch 
+MSI (s) (78:B0) [13:51:25:996]: Note: 1: 2205 2:  3: PatchPackage 
+MSI (s) (78:B0) [13:51:25:996]: Note: 1: 2205 2:  3: MsiPatchHeaders 
+MSI (s) (78:B0) [13:51:25:996]: Note: 1: 2205 2:  3: __MsiPatchFileList 
+MSI (s) (78:B0) [13:51:25:996]: Note: 1: 2205 2:  3: PatchPackage 
+MSI (s) (78:B0) [13:51:25:996]: Note: 1: 2228 2:  3: PatchPackage 4: SELECT `DiskId`, `PatchId`, `LastSequence` FROM `Media`, `PatchPackage` WHERE `Media`.`DiskId`=`PatchPackage`.`Media_` ORDER BY `DiskId`  
+MSI (s) (78:B0) [13:51:25:996]: Note: 1: 2205 2:  3: Patch 
+Action start 13:51:25: CostInitialize.
+MSI (s) (78:B0) [13:51:25:996]: Doing action: FileCost
+Action ended 13:51:25: CostInitialize. Return value 1.
+MSI (s) (78:B0) [13:51:25:996]: Note: 1: 2205 2:  3: MsiAssembly 
+MSI (s) (78:B0) [13:51:25:996]: Note: 1: 2205 2:  3: Class 
+MSI (s) (78:B0) [13:51:25:996]: Note: 1: 2205 2:  3: Extension 
+MSI (s) (78:B0) [13:51:25:996]: Note: 1: 2205 2:  3: TypeLib 
+Action start 13:51:25: FileCost.
+MSI (s) (78:B0) [13:51:25:996]: Doing action: CostFinalize
+Action ended 13:51:25: FileCost. Return value 1.
+MSI (s) (78:B0) [13:51:25:996]: PROPERTY CHANGE: Adding OutOfDiskSpace property. Its value is '0'.
+MSI (s) (78:B0) [13:51:25:996]: PROPERTY CHANGE: Adding OutOfNoRbDiskSpace property. Its value is '0'.
+MSI (s) (78:B0) [13:51:25:996]: PROPERTY CHANGE: Adding PrimaryVolumeSpaceAvailable property. Its value is '0'.
+MSI (s) (78:B0) [13:51:25:996]: PROPERTY CHANGE: Adding PrimaryVolumeSpaceRequired property. Its value is '0'.
+MSI (s) (78:B0) [13:51:25:996]: PROPERTY CHANGE: Adding PrimaryVolumeSpaceRemaining property. Its value is '0'.
+MSI (s) (78:B0) [13:51:25:996]: Note: 1: 2205 2:  3: Patch 
+MSI (s) (78:B0) [13:51:25:996]: Note: 1: 2205 2:  3: Condition 
+MSI (s) (78:B0) [13:51:25:996]: PROPERTY CHANGE: Adding TARGETDIR property. Its value is 'C:\'.
+MSI (s) (78:B0) [13:51:25:996]: PROPERTY CHANGE: Adding APPLICATIONROOTDIRECTORY property. Its value is 'C:\Program Files\windows_exporter\'.
+MSI (s) (78:B0) [13:51:25:996]: PROPERTY CHANGE: Adding textfile_inputs property. Its value is 'C:\Program Files\windows_exporter\textfile_inputs\'.
+MSI (s) (78:B0) [13:51:25:996]: Target path resolution complete. Dumping Directory table...
+MSI (s) (78:B0) [13:51:25:996]: Note: target paths subject to change (via custom actions or browsing)
+MSI (s) (78:B0) [13:51:25:996]: Dir (target): Key: TARGETDIR	, Object: C:\
+MSI (s) (78:B0) [13:51:25:996]: Dir (target): Key: WindowsFolder	, Object: C:\Windows\
+MSI (s) (78:B0) [13:51:25:996]: Dir (target): Key: ProgramFiles64Folder	, Object: C:\Program Files\
+MSI (s) (78:B0) [13:51:25:996]: Dir (target): Key: APPLICATIONROOTDIRECTORY	, Object: C:\Program Files\windows_exporter\
+MSI (s) (78:B0) [13:51:25:996]: Dir (target): Key: textfile_inputs	, Object: C:\Program Files\windows_exporter\textfile_inputs\
+MSI (s) (78:B0) [13:51:25:996]: PROPERTY CHANGE: Adding INSTALLLEVEL property. Its value is '1'.
+MSI (s) (78:B0) [13:51:25:996]: Note: 1: 2205 2:  3: MsiAssembly 
+MSI (s) (78:B0) [13:51:25:996]: Note: 1: 2228 2:  3: MsiAssembly 4:  SELECT `MsiAssembly`.`Attributes`, `MsiAssembly`.`File_Application`, `MsiAssembly`.`File_Manifest`,  `Component`.`KeyPath` FROM `MsiAssembly`, `Component` WHERE  `MsiAssembly`.`Component_` = `Component`.`Component` AND `MsiAssembly`.`Component_` = ? 
+Action start 13:51:25: CostFinalize.
+MSI (s) (78:B0) [13:51:26:012]: Doing action: MigrateFeatureStates
+Action ended 13:51:26: CostFinalize. Return value 1.
+Action start 13:51:26: MigrateFeatureStates.
+MSI (s) (78:B0) [13:51:26:012]: Doing action: InstallValidate
+Action ended 13:51:26: MigrateFeatureStates. Return value 0.
+MSI (s) (78:B0) [13:51:26:012]: PROPERTY CHANGE: Deleting MsiRestartManagerSessionKey property. Its current value is 'dbcfd418007b5841b6d417705143e947'.
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: Dialog 
+MSI (s) (78:B0) [13:51:26:012]: Feature: DefaultFeature; Installed: Absent;   Request: Local;   Action: Local
+MSI (s) (78:B0) [13:51:26:012]: Component: windows_exporter.exe; Installed: Absent;   Request: Local;   Action: Local
+MSI (s) (78:B0) [13:51:26:012]: Component: CreateTextfileDirectory; Installed: Absent;   Request: Local;   Action: Local
+MSI (s) (78:B0) [13:51:26:012]: Component: __windows_exporter.exe65; Installed: Null;   Request: Local;   Action: Local
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: BindImage 
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: ProgId 
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: PublishComponent 
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: SelfReg 
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: Extension 
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: Font 
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: Shortcut 
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: Class 
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: Icon 
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: TypeLib 
+Action start 13:51:26: InstallValidate.
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: _RemoveFilePath 
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: MsiFileHash 
+MSI (s) (78:B0) [13:51:26:012]: PROPERTY CHANGE: Modifying CostingComplete property. Its current value is '0'. Its new value: '1'.
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: BindImage 
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: ProgId 
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: PublishComponent 
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: SelfReg 
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: Extension 
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: Font 
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: Shortcut 
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: Class 
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: Icon 
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: TypeLib 
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2727 2:  
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2205 2:  3: FilesInUse 
+MSI (s) (78:B0) [13:51:26:012]: Note: 1: 2727 2:  
+MSI (s) (78:B0) [13:51:26:012]: Doing action: InstallInitialize
+Action ended 13:51:26: InstallValidate. Return value 1.
+MSI (s) (78:B0) [13:51:26:027]: Machine policy value 'AlwaysInstallElevated' is 0
+MSI (s) (78:B0) [13:51:26:027]: User policy value 'AlwaysInstallElevated' is 0
+MSI (s) (78:B0) [13:51:26:027]: BeginTransaction: Locking Server
+MSI (s) (78:B0) [13:51:26:027]: Note: 1: 2203 2: C:\Windows\Installer\17fdb.ipi 3: -2147287038 
+MSI (s) (78:B0) [13:51:26:027]: SRSetRestorePoint skipped for this transaction.
+MSI (s) (78:B0) [13:51:26:027]: Note: 1: 2203 2: C:\Windows\Installer\17fdb.ipi 3: -2147287038 
+MSI (s) (78:B0) [13:51:26:027]: Server not locked: locking for product {F6DCD1DB-A703-47EA-BEFF-7064DD34C2FC}
+Action start 13:51:26: InstallInitialize.
+MSI (s) (78:B0) [13:51:26:199]: Doing action: RemoveExistingProducts
+Action ended 13:51:26: InstallInitialize. Return value 1.
+Action start 13:51:26: RemoveExistingProducts.
+MSI (s) (78:B0) [13:51:26:215]: Doing action: ProcessComponents
+Action ended 13:51:26: RemoveExistingProducts. Return value 1.
+MSI (s) (78:B0) [13:51:26:215]: Note: 1: 2205 2:  3: MsiPatchCertificate 
+MSI (s) (78:B0) [13:51:26:215]: LUA patching is disabled: missing MsiPatchCertificate table
+MSI (s) (78:B0) [13:51:26:215]: Resolving source.
+MSI (s) (78:B0) [13:51:26:215]: Resolving source to launched-from source.
+MSI (s) (78:B0) [13:51:26:215]: Setting launched-from source as last-used.
+MSI (s) (78:B0) [13:51:26:215]: PROPERTY CHANGE: Adding SourceDir property. Its value is 'C:\lab\'.
+MSI (s) (78:B0) [13:51:26:215]: PROPERTY CHANGE: Adding SOURCEDIR property. Its value is 'C:\lab\'.
+MSI (s) (78:B0) [13:51:26:215]: PROPERTY CHANGE: Adding SourcedirProduct property. Its value is '{F6DCD1DB-A703-47EA-BEFF-7064DD34C2FC}'.
+MSI (s) (78:B0) [13:51:26:215]: SOURCEDIR ==> C:\lab\
+MSI (s) (78:B0) [13:51:26:215]: SOURCEDIR product ==> {F6DCD1DB-A703-47EA-BEFF-7064DD34C2FC}
+MSI (s) (78:B0) [13:51:26:215]: Determining source type
+MSI (s) (78:B0) [13:51:26:215]: Source type from package 'windows_exporter-0.18.1-amd64.msi': 2
+Action start 13:51:26: ProcessComponents.
+MSI (s) (78:B0) [13:51:26:215]: Source path resolution complete. Dumping Directory table...
+MSI (s) (78:B0) [13:51:26:215]: Dir (source): Key: TARGETDIR	, Object: C:\lab\	, LongSubPath: 	, ShortSubPath: 
+MSI (s) (78:B0) [13:51:26:215]: Dir (source): Key: WindowsFolder	, Object: C:\lab\	, LongSubPath: 	, ShortSubPath: 
+MSI (s) (78:B0) [13:51:26:215]: Dir (source): Key: ProgramFiles64Folder	, Object: C:\lab\	, LongSubPath: 	, ShortSubPath: 
+MSI (s) (78:B0) [13:51:26:215]: Dir (source): Key: APPLICATIONROOTDIRECTORY	, Object: C:\lab\	, LongSubPath: windows_exporter\	, ShortSubPath: v2pjrlg7\
+MSI (s) (78:B0) [13:51:26:215]: Dir (source): Key: textfile_inputs	, Object: C:\lab\	, LongSubPath: windows_exporter\textfile_inputs\	, ShortSubPath: v2pjrlg7\vizu-hub\
+MSI (s) (78:B0) [13:51:26:215]: Doing action: UnpublishFeatures
+Action ended 13:51:26: ProcessComponents. Return value 1.
+Action start 13:51:26: UnpublishFeatures.
+MSI (s) (78:B0) [13:51:26:215]: Doing action: StopServices
+Action ended 13:51:26: UnpublishFeatures. Return value 1.
+Action start 13:51:26: StopServices.
+MSI (s) (78:B0) [13:51:26:215]: Doing action: DeleteServices
+Action ended 13:51:26: StopServices. Return value 1.
+Action start 13:51:26: DeleteServices.
+MSI (s) (78:B0) [13:51:26:215]: Doing action: RemoveRegistryValues
+Action ended 13:51:26: DeleteServices. Return value 1.
+Action start 13:51:26: RemoveRegistryValues.
+MSI (s) (78:B0) [13:51:26:230]: Doing action: WixSchedFirewallExceptionsUninstall
+Action ended 13:51:26: RemoveRegistryValues. Return value 1.
+MSI (s) (78:C4) [13:51:26:230]: Invoking remote custom action. DLL: C:\Windows\Installer\MSI8556.tmp, Entrypoint: SchedFirewallExceptionsUninstall
+MSI (s) (78:C8) [13:51:26:230]: Generating random cookie.
+MSI (s) (78:C8) [13:51:26:261]: Created Custom Action Server with PID 1996 (0x7CC).
+MSI (s) (78:88) [13:51:26:386]: Running as a service.
+MSI (s) (78:88) [13:51:26:386]: Hello, I'm your 32bit Elevated custom action server.
+Action start 13:51:26: WixSchedFirewallExceptionsUninstall.
+SchedFirewallExceptions:  Component 'windows_exporter.exe' action state (1) doesn't match request (2)
+SchedFirewallExceptions:  No firewall exceptions scheduled
+MSI (s) (78:B0) [13:51:26:417]: Doing action: RemoveFiles
+Action ended 13:51:26: WixSchedFirewallExceptionsUninstall. Return value 1.
+MSI (s) (78:B0) [13:51:26:417]: Note: 1: 2205 2:  3: RemoveFile 
+MSI (s) (78:B0) [13:51:26:417]: Note: 1: 2205 2:  3: RemoveFile 
+Action start 13:51:26: RemoveFiles.
+MSI (s) (78:B0) [13:51:26:417]: Doing action: RemoveFolders
+Action ended 13:51:26: RemoveFiles. Return value 0.
+Action start 13:51:26: RemoveFolders.
+MSI (s) (78:B0) [13:51:26:417]: Doing action: CreateFolders
+Action ended 13:51:26: RemoveFolders. Return value 1.
+Action start 13:51:26: CreateFolders.
+MSI (s) (78:B0) [13:51:26:417]: Doing action: InstallFiles
+Action ended 13:51:26: CreateFolders. Return value 1.
+Action start 13:51:26: InstallFiles.
+MSI (s) (78:B0) [13:51:26:417]: Note: 1: 2205 2:  3: Patch 
+MSI (s) (78:B0) [13:51:26:417]: Note: 1: 2228 2:  3: Patch 4: SELECT `Patch`.`File_`, `Patch`.`Header`, `Patch`.`Attributes`, `Patch`.`Sequence`, `Patch`.`StreamRef_` FROM `Patch` WHERE `Patch`.`File_` = ? AND `Patch`.`#_MsiActive`=? ORDER BY `Patch`.`Sequence` 
+MSI (s) (78:B0) [13:51:26:417]: Note: 1: 2205 2:  3: MsiSFCBypass 
+MSI (s) (78:B0) [13:51:26:417]: Note: 1: 2228 2:  3: MsiSFCBypass 4: SELECT `File_` FROM `MsiSFCBypass` WHERE `File_` = ? 
+MSI (s) (78:B0) [13:51:26:417]: Note: 1: 2205 2:  3: MsiPatchHeaders 
+MSI (s) (78:B0) [13:51:26:417]: Note: 1: 2228 2:  3: MsiPatchHeaders 4: SELECT `Header` FROM `MsiPatchHeaders` WHERE `StreamRef` = ? 
+MSI (s) (78:B0) [13:51:26:417]: Note: 1: 2205 2:  3: PatchPackage 
+MSI (s) (78:B0) [13:51:26:417]: Note: 1: 2205 2:  3: MsiPatchHeaders 
+MSI (s) (78:B0) [13:51:26:417]: Note: 1: 2205 2:  3: PatchPackage 
+MSI (s) (78:B0) [13:51:26:417]: Note: 1: 2205 2:  3: Patch 
+MSI (s) (78:B0) [13:51:26:417]: Note: 1: 2228 2:  3: Patch 4: SELECT `Patch`.`Sequence`, `Patch`.`PatchSize`, `Patch`.`Attributes`, `Patch`.`Header`, `Patch`.`StreamRef_` FROM `File`,`Patch`,`Component` WHERE `File`=? AND `File`=`File_` AND `Component`=`Component_` ORDER BY `Patch`.`Sequence` 
+MSI (s) (78:B0) [13:51:26:417]: Doing action: SetCollectorsFlag
+Action ended 13:51:26: InstallFiles. Return value 1.
+MSI (s) (78:B0) [13:51:26:417]: PROPERTY CHANGE: Adding CollectorsFlag property. Its value is '--collectors.enabled cpu,cs,logical_disk,memory,net,os,service,system,tcp'.
+Action start 13:51:26: SetCollectorsFlag.
+MSI (s) (78:B0) [13:51:26:417]: Skipping action: SetExtraFlags (condition is false)
+MSI (s) (78:B0) [13:51:26:417]: Skipping action: SetListenFlagAddr (condition is false)
+MSI (s) (78:B0) [13:51:26:417]: Skipping action: SetListenFlagBoth (condition is false)
+MSI (s) (78:B0) [13:51:26:417]: Doing action: SetListenFlagPort
+Action ended 13:51:26: SetCollectorsFlag. Return value 1.
+MSI (s) (78:B0) [13:51:26:433]: PROPERTY CHANGE: Adding ListenFlagPort property. Its value is '--telemetry.addr 0.0.0.0:9182'.
+Action start 13:51:26: SetListenFlagPort.
+MSI (s) (78:B0) [13:51:26:433]: Skipping action: SetMetricsPathFlag (condition is false)
+MSI (s) (78:B0) [13:51:26:433]: Skipping action: SetRemoteAddressFlag (condition is false)
+MSI (s) (78:B0) [13:51:26:433]: Skipping action: SetTextfileDirFlag (condition is false)
+MSI (s) (78:B0) [13:51:26:433]: Doing action: WixSchedFirewallExceptionsInstall
+Action ended 13:51:26: SetListenFlagPort. Return value 1.
+MSI (s) (78:EC) [13:51:26:433]: Invoking remote custom action. DLL: C:\Windows\Installer\MSI8621.tmp, Entrypoint: SchedFirewallExceptionsInstall
+Action start 13:51:26: WixSchedFirewallExceptionsInstall.
+MSI (s) (78!F0) [13:51:26:433]: PROPERTY CHANGE: Adding WixRollbackFirewallExceptionsInstall property. Its value is '1windows_exporter (HTTP 9182)214748364712C:\Program Files\windows_exporter\windows_exporter.exe91826windows_exporter HTTP endpoint'.
+SchedFirewallExceptions:  Scheduling firewall exception (1€windows_exporter (HTTP 9182)€2147483647€€1€2€C:\Program Files\windows_exporter\windows_exporter.exe€9182€6€windows_exporter HTTP endpoint)
+MSI (s) (78!F0) [13:51:26:433]: Doing action: WixRollbackFirewallExceptionsInstall
+Action start 13:51:26: WixRollbackFirewallExceptionsInstall.
+MSI (s) (78!F0) [13:51:26:449]: PROPERTY CHANGE: Adding WixExecFirewallExceptionsInstall property. Its value is '1windows_exporter (HTTP 9182)214748364712C:\Program Files\windows_exporter\windows_exporter.exe91826windows_exporter HTTP endpoint'.
+Action ended 13:51:26: WixRollbackFirewallExceptionsInstall. Return value 1.
+MSI (s) (78!F0) [13:51:26:449]: Doing action: WixExecFirewallExceptionsInstall
+Action start 13:51:26: WixExecFirewallExceptionsInstall.
+Action ended 13:51:26: WixExecFirewallExceptionsInstall. Return value 1.
+MSI (s) (78:B0) [13:51:26:449]: Doing action: WriteRegistryValues
+Action ended 13:51:26: WixSchedFirewallExceptionsInstall. Return value 1.
+Action start 13:51:26: WriteRegistryValues.
+MSI (s) (78:B0) [13:51:26:449]: Doing action: InstallServices
+Action ended 13:51:26: WriteRegistryValues. Return value 1.
+Action start 13:51:26: InstallServices.
+MSI (s) (78:B0) [13:51:26:449]: Doing action: SchedServiceConfig
+Action ended 13:51:26: InstallServices. Return value 1.
+MSI (s) (78:F8) [13:51:26:449]: Invoking remote custom action. DLL: C:\Windows\Installer\MSI8632.tmp, Entrypoint: SchedServiceConfig
+MSI (s) (78!FC) [13:51:26:464]: PROPERTY CHANGE: Adding RollbackServiceConfig property. Its value is 'SchedServiceConfig'.
+Action start 13:51:26: SchedServiceConfig.
+MSI (s) (78!FC) [13:51:26:464]: Doing action: RollbackServiceConfig
+Action start 13:51:26: RollbackServiceConfig.
+MSI (s) (78!FC) [13:51:26:464]: PROPERTY CHANGE: Adding ExecServiceConfig property. Its value is 'SchedServiceConfigwindows_exporter1restartrestartrestart060'.
+Action ended 13:51:26: RollbackServiceConfig. Return value 1.
+MSI (s) (78!FC) [13:51:26:464]: Doing action: ExecServiceConfig
+Action start 13:51:26: ExecServiceConfig.
+Action ended 13:51:26: ExecServiceConfig. Return value 1.
+MSI (s) (78:B0) [13:51:26:464]: Doing action: StartServices
+Action ended 13:51:26: SchedServiceConfig. Return value 1.
+Action start 13:51:26: StartServices.
+MSI (s) (78:B0) [13:51:26:464]: Doing action: RegisterUser
+Action ended 13:51:26: StartServices. Return value 1.
+Action start 13:51:26: RegisterUser.
+MSI (s) (78:B0) [13:51:26:464]: Doing action: RegisterProduct
+Action ended 13:51:26: RegisterUser. Return value 1.
+Action start 13:51:26: RegisterProduct.
+MSI (s) (78:B0) [13:51:26:480]: PROPERTY CHANGE: Adding ProductToBeRegistered property. Its value is '1'.
+MSI (s) (78:B0) [13:51:26:480]: Doing action: PublishFeatures
+Action ended 13:51:26: RegisterProduct. Return value 1.
+Action start 13:51:26: PublishFeatures.
+MSI (s) (78:B0) [13:51:26:480]: Doing action: PublishProduct
+Action ended 13:51:26: PublishFeatures. Return value 1.
+MSI (s) (78:B0) [13:51:26:480]: Note: 1: 2205 2:  3: Icon 
+MSI (s) (78:B0) [13:51:26:480]: Note: 1: 2228 2:  3: Icon 4: SELECT `Name`, `Data` FROM `Icon` 
+Action start 13:51:26: PublishProduct.
+MSI (s) (78:B0) [13:51:26:480]: Doing action: InstallFinalize
+Action ended 13:51:26: PublishProduct. Return value 1.
+MSI (s) (78:B0) [13:51:26:480]: Running Script: C:\Windows\Installer\MSI8545.tmp
+MSI (s) (78:B0) [13:51:26:480]: PROPERTY CHANGE: Adding UpdateStarted property. Its value is '1'.
+MSI (s) (78:B0) [13:51:26:480]: Machine policy value 'DisableRollback' is 0
+MSI (s) (78:B0) [13:51:26:480]: Note: 1: 1402 2: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Installer\Rollback\Scripts 3: 2 
+MSI (s) (78:B0) [13:51:26:480]: Executing op: Header(Signature=1397708873,Version=500,Timestamp=1567845998,LangId=1033,Platform=589824,ScriptType=1,ScriptMajorVersion=21,ScriptMinorVersion=4,ScriptAttributes=1)
+Action start 13:51:26: InstallFinalize.
+MSI (s) (78:B0) [13:51:26:480]: Executing op: ProductInfo(ProductKey={F6DCD1DB-A703-47EA-BEFF-7064DD34C2FC},ProductName=windows_exporter,PackageName=windows_exporter-0.18.1-amd64.msi,Language=1033,Version=1179649,Assignment=1,ObsoleteArg=0,,,PackageCode={14FB4FA1-4B4C-4065-96FA-84E8162AB2AF},,,InstanceType=0,LUASetting=0,RemoteURTInstalls=0,ProductDeploymentFlags=3)
+MSI (s) (78:B0) [13:51:26:480]: Executing op: DialogInfo(Type=0,Argument=1033)
+MSI (s) (78:B0) [13:51:26:480]: Executing op: DialogInfo(Type=1,Argument=windows_exporter)
+MSI (s) (78:B0) [13:51:26:480]: Executing op: RollbackInfo(,RollbackAction=Rollback,RollbackDescription=Rolling back action:,RollbackTemplate=[1],CleanupAction=RollbackCleanup,CleanupDescription=Removing backup files,CleanupTemplate=File: [1])
+MSI (s) (78:B0) [13:51:26:480]: Executing op: SetBaseline(Baseline=0,)
+MSI (s) (78:B0) [13:51:26:480]: Executing op: SetBaseline(Baseline=1,)
+MSI (s) (78:B0) [13:51:26:480]: Executing op: ActionStart(Name=ProcessComponents,Description=Updating component registration,)
+MSI (s) (78:B0) [13:51:26:480]: Executing op: ProgressTotal(Total=2,Type=1,ByteEquivalent=24000)
+MSI (s) (78:B0) [13:51:26:480]: Executing op: ComponentRegister(ComponentId={5546455E-B5EA-5AF8-A21A-AA526F04D083},KeyPath=C:\Program Files\windows_exporter\windows_exporter.exe,State=3,,Disk=1,SharedDllRefCount=2,BinaryType=1)
+MSI (s) (78:B0) [13:51:26:480]: Executing op: ComponentRegister(ComponentId={D03EF58A-9CBF-4165-AD39-D143E9B27E14},KeyPath=C:\Program Files\windows_exporter\textfile_inputs\,State=3,,Disk=1,SharedDllRefCount=0,BinaryType=1)
+MSI (s) (78:B0) [13:51:26:495]: Executing op: ActionStart(Name=StopServices,Description=Stopping services,Template=Service: [1])
+MSI (s) (78:B0) [13:51:26:495]: Executing op: ProgressTotal(Total=1,Type=1,ByteEquivalent=1300000)
+MSI (s) (78:B0) [13:51:26:495]: Executing op: ServiceControl(,Name=windows_exporter,Action=2,,)
+MSI (s) (78:B0) [13:51:31:503]: Executing op: ActionStart(Name=CreateFolders,Description=Creating folders,Template=Folder: [1])
+MSI (s) (78:B0) [13:51:31:503]: Executing op: FolderCreate(Folder=C:\Program Files\windows_exporter\textfile_inputs\,Foreign=0,,)
+MSI (s) (78:B0) [13:51:31:503]: Executing op: ActionStart(Name=InstallFiles,Description=Copying new files,Template=File: [1],  Directory: [9],  Size: [6])
+MSI (s) (78:B0) [13:51:31:503]: Executing op: ProgressTotal(Total=19081216,Type=0,ByteEquivalent=1)
+MSI (s) (78:B0) [13:51:31:503]: Executing op: SetTargetFolder(Folder=C:\Program Files\windows_exporter\)
+MSI (s) (78:B0) [13:51:31:503]: Executing op: SetSourceFolder(Folder=1\v2pjrlg7\|windows_exporter\)
+MSI (s) (78:B0) [13:51:31:503]: Executing op: ChangeMedia(,MediaPrompt=Please insert the disk: ,MediaCabinet=windows_exporter.cab,BytesPerTick=65536,CopierType=2,ModuleFileName=C:\Windows\Installer\183de.msi,,,,,IsFirstPhysicalMedia=1)
+MSI (s) (78:B0) [13:51:31:503]: Executing op: RegisterSharedComponentProvider(,,File=windows_exporter.exe,Component={5546455E-B5EA-5AF8-A21A-AA526F04D083},ComponentVersion=0.18.1.0,ProductCode={F6DCD1DB-A703-47EA-BEFF-7064DD34C2FC},ProductVersion=0.18.1,PatchSize=0,PatchAttributes=0,PatchSequence=0,SharedComponent=0,IsFullFile=0)
+MSI (s) (78:B0) [13:51:31:503]: Executing op: FileCopy(SourceName=xgf6mqi1.exe|windows_exporter.exe,SourceCabKey=windows_exporter.exe,DestName=windows_exporter.exe,Attributes=512,FileSize=19081216,PerTick=65536,,VerifyMedia=1,,,,,CheckCRC=0,Version=0.18.1.0,Language=0,InstallMode=58982400,,,,,,,)
+MSI (s) (78:B0) [13:51:31:503]: File: C:\Program Files\windows_exporter\windows_exporter.exe;	Won't Overwrite;	Won't patch;	Existing file is of an equal version
+MSI (s) (78:B0) [13:51:31:503]: Executing op: CacheSizeFlush(,)
+MSI (s) (78:B0) [13:51:31:503]: Executing op: ActionStart(Name=WixRollbackFirewallExceptionsInstall,Description=Rolling back Windows Firewall configuration,)
+MSI (s) (78:B0) [13:51:31:503]: Executing op: CustomActionSchedule(Action=WixRollbackFirewallExceptionsInstall,ActionType=3329,Source=BinaryData,Target=ExecFirewallExceptions,CustomActionData=1windows_exporter (HTTP 9182)214748364712C:\Program Files\windows_exporter\windows_exporter.exe91826windows_exporter HTTP endpoint)
+MSI (s) (78:B0) [13:51:31:503]: Executing op: ActionStart(Name=WixExecFirewallExceptionsInstall,Description=Installing Windows Firewall configuration,)
+MSI (s) (78:B0) [13:51:31:503]: Executing op: CustomActionSchedule(Action=WixExecFirewallExceptionsInstall,ActionType=3073,Source=BinaryData,Target=ExecFirewallExceptions,CustomActionData=1windows_exporter (HTTP 9182)214748364712C:\Program Files\windows_exporter\windows_exporter.exe91826windows_exporter HTTP endpoint)
+MSI (s) (78:A4) [13:51:31:519]: Invoking remote custom action. DLL: C:\Windows\Installer\MSI99F2.tmp, Entrypoint: ExecFirewallExceptions
+MSI (s) (78:B0) [13:51:31:550]: Executing op: ActionStart(Name=WriteRegistryValues,Description=Writing system registry values,Template=Key: [1], Name: [2], Value: [3])
+ExecFirewallExceptions:  Installing firewall exception2 windows_exporter (HTTP 9182) (C:\Program Files\windows_exporter\windows_exporter.exe)
+MSI (s) (78:B0) [13:51:31:550]: Executing op: ProgressTotal(Total=1,Type=1,ByteEquivalent=13200)
+MSI (s) (78:B0) [13:51:31:550]: Executing op: RegOpenKey(Root=-2147483646,Key=SYSTEM\CurrentControlSet\Services\EventLog\Application\windows_exporter,,BinaryType=1,,)
+MSI (s) (78:B0) [13:51:31:550]: Executing op: RegAddValue(Name=EventMessageFile,Value=#%%SystemRoot%\System32\EventCreate.exe,)
+MSI (s) (78:B0) [13:51:31:550]: Executing op: ActionStart(Name=InstallServices,Description=Installing new services,Template=Service: [2])
+MSI (s) (78:B0) [13:51:31:550]: Executing op: ProgressTotal(Total=1,Type=1,ByteEquivalent=1300000)
+MSI (s) (78:B0) [13:51:31:550]: Executing op: ServiceInstall(Name=windows_exporter,DisplayName=windows_exporter,ImagePath="C:\Program Files\windows_exporter\windows_exporter.exe" --log.format logger:eventlog?name=windows_exporter --collectors.enabled cpu,cs,logical_disk,memory,net,os,service,system,tcp   --telemetry.addr 0.0.0.0:9182   ,ServiceType=16,StartType=2,ErrorControl=1,,Dependencies=wmiApSrv[~][~][~],,,Password=**********,Description=Exports Prometheus metrics about the system,,)
+MSI (s) (78:B0) [13:51:33:578]: Executing op: ActionStart(Name=RollbackServiceConfig,,)
+MSI (s) (78:B0) [13:51:33:578]: Executing op: CustomActionSchedule(Action=RollbackServiceConfig,ActionType=3329,Source=BinaryData,Target=RollbackServiceConfig,CustomActionData=SchedServiceConfig)
+MSI (s) (78:B0) [13:51:33:578]: Executing op: ActionStart(Name=ExecServiceConfig,,)
+MSI (s) (78:B0) [13:51:33:578]: Executing op: CustomActionSchedule(Action=ExecServiceConfig,ActionType=3073,Source=BinaryData,Target=ExecServiceConfig,CustomActionData=SchedServiceConfigwindows_exporter1restartrestartrestart060)
+MSI (s) (78:F4) [13:51:33:578]: Invoking remote custom action. DLL: C:\Windows\Installer\MSIA20E.tmp, Entrypoint: ExecServiceConfig
+MSI (s) (78:B0) [13:51:35:575]: Executing op: ActionStart(Name=StartServices,Description=Starting services,Template=Service: [1])
+MSI (s) (78:B0) [13:51:35:575]: Executing op: ProgressTotal(Total=1,Type=1,ByteEquivalent=1300000)
+MSI (s) (78:B0) [13:51:35:575]: Executing op: ServiceControl(,Name=windows_exporter,Action=1,,)
+MSI (s) (78:B0) [13:51:36:825]: Executing op: ActionStart(Name=RegisterProduct,Description=Registering product,Template=[1])
+MSI (s) (78:B0) [13:51:36:825]: Executing op: ChangeMedia(,MediaPrompt=Please insert the disk: ,MediaCabinet=windows_exporter.cab,BytesPerTick=0,CopierType=2,ModuleFileName=C:\Windows\Installer\183de.msi,,,,,IsFirstPhysicalMedia=1)
+MSI (s) (78:B0) [13:51:36:825]: Executing op: DatabaseCopy(DatabasePath=C:\Windows\Installer\183de.msi,ProductCode={F6DCD1DB-A703-47EA-BEFF-7064DD34C2FC},,,)
+MSI (s) (78:B0) [13:51:36:825]: Note: 1: 1402 2: UNKNOWN\Products\BD1DCD6F307AAE74EBFF0746DD432CCF\InstallProperties 3: 2 
+MSI (s) (78:B0) [13:51:36:825]: File will have security applied from OpCode.
+MSI (s) (78:B0) [13:51:36:825]: Executing op: ProductRegister(UpgradeCode={66A6EB5B-1FC2-4B14-A362-5CEEC6413308},VersionString=0.18.1,,,,InstallSource=C:\lab\,Publisher=prometheus-community,,,,,,,,,,,,EstimatedSize=18621,,,,)
+MSI (s) (78:B0) [13:51:36:840]: Executing op: ProductCPDisplayInfoRegister()
+MSI (s) (78:B0) [13:51:36:840]: Executing op: ActionStart(Name=PublishFeatures,Description=Publishing Product Features,Template=Feature: [1])
+MSI (s) (78:B0) [13:51:36:840]: Executing op: FeaturePublish(Feature=DefaultFeature,,Absent=2,Component=hK[JCrT88E3aAXBEi{FRc.'xk&ZX$9zwcl9WGuY))
+MSI (s) (78:B0) [13:51:36:840]: Executing op: ActionStart(Name=PublishProduct,Description=Publishing product information,)
+MSI (s) (78:B0) [13:51:36:840]: Executing op: CleanupConfigData()
+MSI (s) (78:B0) [13:51:36:840]: Note: 1: 1402 2: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\BD1DCD6F307AAE74EBFF0746DD432CCF\Patches 3: 2 
+MSI (s) (78:B0) [13:51:36:840]: Executing op: RegisterPatchOrder(Continue=0,SequenceType=1,Remove=0)
+MSI (s) (78:B0) [13:51:36:840]: Note: 1: 1402 2: UNKNOWN\Products\BD1DCD6F307AAE74EBFF0746DD432CCF\Patches 3: 2 
+MSI (s) (78:B0) [13:51:36:840]: Executing op: ProductPublish(PackageKey={14FB4FA1-4B4C-4065-96FA-84E8162AB2AF})
+MSI (s) (78:B0) [13:51:36:856]: Note: 1: 1402 2: UNKNOWN\Installer\Products\BD1DCD6F307AAE74EBFF0746DD432CCF 3: 2 
+MSI (s) (78:B0) [13:51:36:856]: Note: 1: 1402 2: UNKNOWN\Installer\Products\BD1DCD6F307AAE74EBFF0746DD432CCF 3: 2 
+MSI (s) (78:B0) [13:51:36:856]: Note: 1: 1402 2: UNKNOWN\Installer\Products\BD1DCD6F307AAE74EBFF0746DD432CCF 3: 2 
+MSI (s) (78:B0) [13:51:36:856]: Note: 1: 1402 2: UNKNOWN\Installer\Products\BD1DCD6F307AAE74EBFF0746DD432CCF 3: 2 
+MSI (s) (78:B0) [13:51:36:856]: Note: 1: 1402 2: UNKNOWN\Installer\Products\BD1DCD6F307AAE74EBFF0746DD432CCF 3: 2 
+MSI (s) (78:B0) [13:51:36:856]: Note: 1: 1402 2: UNKNOWN\Installer\Products\BD1DCD6F307AAE74EBFF0746DD432CCF 3: 2 
+MSI (s) (78:B0) [13:51:36:856]: Note: 1: 1402 2: UNKNOWN\Installer\Products\BD1DCD6F307AAE74EBFF0746DD432CCF 3: 2 
+MSI (s) (78:B0) [13:51:36:856]: Note: 1: 1402 2: UNKNOWN\Installer\Products\BD1DCD6F307AAE74EBFF0746DD432CCF 3: 2 
+MSI (s) (78:B0) [13:51:36:856]: Note: 1: 1402 2: UNKNOWN\Installer\Products\BD1DCD6F307AAE74EBFF0746DD432CCF 3: 2 
+MSI (s) (78:B0) [13:51:36:856]: Note: 1: 1402 2: UNKNOWN\Installer\Products\BD1DCD6F307AAE74EBFF0746DD432CCF 3: 2 
+MSI (s) (78:B0) [13:51:36:856]: Note: 1: 1402 2: UNKNOWN\Installer\Products\BD1DCD6F307AAE74EBFF0746DD432CCF 3: 2 
+MSI (s) (78:B0) [13:51:36:856]: Executing op: UpgradeCodePublish(UpgradeCode={66A6EB5B-1FC2-4B14-A362-5CEEC6413308})
+MSI (s) (78:B0) [13:51:36:856]: Executing op: SourceListPublish(,,,,NumberOfDisks=1)
+MSI (s) (78:B0) [13:51:36:856]: Note: 1: 1402 2: UNKNOWN\Installer\Products\BD1DCD6F307AAE74EBFF0746DD432CCF\SourceList 3: 2 
+MSI (s) (78:B0) [13:51:36:856]: Executing op: ProductPublishClient(,,)
+MSI (s) (78:B0) [13:51:36:856]: Executing op: SourceListRegisterLastUsed(SourceProduct={F6DCD1DB-A703-47EA-BEFF-7064DD34C2FC},LastUsedSource=C:\lab\)
+MSI (s) (78:B0) [13:51:36:856]: Entering CMsiConfigurationManager::SetLastUsedSource.
+MSI (s) (78:B0) [13:51:36:856]: Specifed source is already in a list.
+MSI (s) (78:B0) [13:51:36:856]: User policy value 'SearchOrder' is 'nmu'
+MSI (s) (78:B0) [13:51:36:856]: Adding new sources is allowed.
+MSI (s) (78:B0) [13:51:36:856]: Set LastUsedSource to: C:\lab\.
+MSI (s) (78:B0) [13:51:36:856]: Set LastUsedType to: n.
+MSI (s) (78:B0) [13:51:36:856]: Set LastUsedIndex to: 1.
+MSI (s) (78:B0) [13:51:36:856]: Executing op: End(Checksum=0,ProgressTotalHDWord=0,ProgressTotalLDWord=32448736)
+MSI (s) (78:B0) [13:51:36:856]: User policy value 'DisableRollback' is 0
+MSI (s) (78:B0) [13:51:36:856]: Machine policy value 'DisableRollback' is 0
+MSI (s) (78:B0) [13:51:36:856]: Note: 1: 2318 2:  
+MSI (s) (78:B0) [13:51:36:871]: No System Restore sequence number for this installation.
+MSI (s) (78:B0) [13:51:36:871]: Unlocking Server
+MSI (s) (78:B0) [13:51:36:949]: PROPERTY CHANGE: Deleting UpdateStarted property. Its current value is '1'.
+Action ended 13:51:36: InstallFinalize. Return value 1.
+Action ended 13:51:36: INSTALL. Return value 1.
+Property(S): UpgradeCode = {66A6EB5B-1FC2-4B14-A362-5CEEC6413308}
+Property(S): WixRollbackFirewallExceptionsInstall = 1windows_exporter (HTTP 9182)214748364712C:\Program Files\windows_exporter\windows_exporter.exe91826windows_exporter HTTP endpoint
+Property(S): WixExecFirewallExceptionsInstall = 1windows_exporter (HTTP 9182)214748364712C:\Program Files\windows_exporter\windows_exporter.exe91826windows_exporter HTTP endpoint
+Property(S): APPLICATIONROOTDIRECTORY = C:\Program Files\windows_exporter\
+Property(S): textfile_inputs = C:\Program Files\windows_exporter\textfile_inputs\
+Property(S): CollectorsFlag = --collectors.enabled cpu,cs,logical_disk,memory,net,os,service,system,tcp
+Property(S): ListenFlagPort = --telemetry.addr 0.0.0.0:9182
+Property(S): ExecServiceConfig = SchedServiceConfigwindows_exporter1restartrestartrestart060
+Property(S): RollbackServiceConfig = SchedServiceConfig
+Property(S): ProgramFiles64Folder = C:\Program Files\
+Property(S): TARGETDIR = C:\
+Property(S): SourceDir = C:\lab\
+Property(S): VersionNT = 601
+Property(S): ENABLED_COLLECTORS = cpu,cs,logical_disk,memory,net,os,service,system,tcp
+Property(S): ALLUSERS = 1
+Property(S): Manufacturer = prometheus-community
+Property(S): ProductCode = {F6DCD1DB-A703-47EA-BEFF-7064DD34C2FC}
+Property(S): ProductLanguage = 1033
+Property(S): ProductName = windows_exporter
+Property(S): ProductVersion = 0.18.1
+Property(S): SecureCustomProperties = ENABLED_COLLECTORS;EXTRA_FLAGS;LISTEN_ADDR;LISTEN_PORT;METRICS_PATH;REMOTE_ADDR;TEXTFILE_DIR;WIX_DOWNGRADE_DETECTED;WIX_UPGRADE_DETECTED
+Property(S): MsiLogFileLocation = C:\lab\evidence\windows_exporter_msi.log
+Property(S): PackageCode = {14FB4FA1-4B4C-4065-96FA-84E8162AB2AF}
+Property(S): ProductState = -1
+Property(S): PackagecodeChanging = 1
+Property(S): REBOOT = ReallySuppress
+Property(S): LISTEN_PORT = 9182
+Property(S): CURRENTDIRECTORY = C:\Windows\system32
+Property(S): CLIENTUILEVEL = 3
+Property(S): CLIENTPROCESSID = 1704
+Property(S): VersionDatabase = 500
+Property(S): VersionMsi = 5.00
+Property(S): VersionNT64 = 601
+Property(S): WindowsBuild = 7600
+Property(S): ServicePackLevel = 0
+Property(S): ServicePackLevelMinor = 0
+Property(S): MsiNTProductType = 1
+Property(S): WindowsFolder = C:\Windows\
+Property(S): WindowsVolume = C:\
+Property(S): System64Folder = C:\Windows\system32\
+Property(S): SystemFolder = C:\Windows\SysWOW64\
+Property(S): RemoteAdminTS = 1
+Property(S): TempFolder = C:\Windows\TEMP\
+Property(S): ProgramFilesFolder = C:\Program Files (x86)\
+Property(S): CommonFilesFolder = C:\Program Files (x86)\Common Files\
+Property(S): CommonFiles64Folder = C:\Program Files\Common Files\
+Property(S): AppDataFolder = C:\Windows\system32\config\systemprofile\AppData\Roaming\
+Property(S): FavoritesFolder = C:\Windows\system32\config\systemprofile\Favorites\
+Property(S): NetHoodFolder = C:\Windows\system32\config\systemprofile\AppData\Roaming\Microsoft\Windows\Network Shortcuts\
+Property(S): PersonalFolder = C:\Windows\system32\config\systemprofile\Documents\
+Property(S): PrintHoodFolder = C:\Windows\system32\config\systemprofile\AppData\Roaming\Microsoft\Windows\Printer Shortcuts\
+Property(S): RecentFolder = C:\Windows\system32\config\systemprofile\AppData\Roaming\Microsoft\Windows\Recent\
+Property(S): SendToFolder = C:\Windows\system32\config\systemprofile\AppData\Roaming\Microsoft\Windows\SendTo\
+Property(S): TemplateFolder = C:\ProgramData\Microsoft\Windows\Templates\
+Property(S): CommonAppDataFolder = C:\ProgramData\
+Property(S): LocalAppDataFolder = C:\Windows\system32\config\systemprofile\AppData\Local\
+Property(S): MyPicturesFolder = C:\Windows\system32\config\systemprofile\Pictures\
+Property(S): AdminToolsFolder = C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\
+Property(S): StartupFolder = C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\
+Property(S): ProgramMenuFolder = C:\ProgramData\Microsoft\Windows\Start Menu\Programs\
+Property(S): StartMenuFolder = C:\ProgramData\Microsoft\Windows\Start Menu\
+Property(S): DesktopFolder = C:\Users\Public\Desktop\
+Property(S): FontsFolder = C:\Windows\Fonts\
+Property(S): GPTSupport = 1
+Property(S): OLEAdvtSupport = 1
+Property(S): ShellAdvtSupport = 1
+Property(S): MsiAMD64 = 6
+Property(S): Msix64 = 6
+Property(S): Intel = 6
+Property(S): PhysicalMemory = 2048
+Property(S): VirtualMemory = 3003
+Property(S): AdminUser = 1
+Property(S): MsiTrueAdminUser = 1
+Property(S): LogonUser = Système
+Property(S): UserSID = S-1-5-18
+Property(S): UserLanguageID = 1036
+Property(S): ComputerName = CLI01
+Property(S): SystemLanguageID = 1036
+Property(S): ScreenX = 1024
+Property(S): ScreenY = 768
+Property(S): CaptionHeight = 22
+Property(S): BorderTop = 1
+Property(S): BorderSide = 1
+Property(S): TextHeight = 16
+Property(S): TextInternalLeading = 3
+Property(S): ColorBits = 32
+Property(S): TTCSupport = 1
+Property(S): Time = 13:51:36
+Property(S): Date = 19/11/2026
+Property(S): MsiNetAssemblySupport = 2.0.50727.4927
+Property(S): MsiWin32AssemblySupport = 6.1.7600.16385
+Property(S): RedirectedDllSupport = 2
+Property(S): MsiRunningElevated = 1
+Property(S): Privileged = 1
+Property(S): USERNAME = Lab
+Property(S): COMPANYNAME = Projet Cloud
+Property(S): DATABASE = C:\Windows\Installer\183de.msi
+Property(S): OriginalDatabase = C:\lab\windows_exporter-0.18.1-amd64.msi
+Property(S): UILevel = 2
+Property(S): ACTION = INSTALL
+Property(S): ROOTDRIVE = C:\
+Property(S): CostingComplete = 1
+Property(S): OutOfDiskSpace = 0
+Property(S): OutOfNoRbDiskSpace = 0
+Property(S): PrimaryVolumeSpaceAvailable = 0
+Property(S): PrimaryVolumeSpaceRequired = 0
+Property(S): PrimaryVolumeSpaceRemaining = 0
+Property(S): INSTALLLEVEL = 1
+Property(S): SOURCEDIR = C:\lab\
+Property(S): SourcedirProduct = {F6DCD1DB-A703-47EA-BEFF-7064DD34C2FC}
+Property(S): ProductToBeRegistered = 1
+MSI (s) (78:B0) [13:51:36:981]: Note: 1: 1707 
+MSI (s) (78:B0) [13:51:36:981]: Product: windows_exporter -- Installation completed successfully.
+
+MSI (s) (78:B0) [13:51:36:996]: Windows Installer a installé le produit. Nom du produit : windows_exporter. Version du produit : 0.18.1. Langue du produit : 1033. Fabricant : prometheus-community. Réussite de l’installation ou état d’erreur : 0.
+
+MSI (s) (78:B0) [13:51:36:996]: Deferring clean up of packages/files, if any exist
+MSI (s) (78:B0) [13:51:36:996]: MainEngineThread is returning 0
+MSI (s) (78:8C) [13:51:36:996]: RESTART MANAGER: Session closed.
+MSI (s) (78:8C) [13:51:36:996]: No System Restore sequence number for this installation.
+=== Logging stopped: 19/11/2026  13:51:36 ===
+MSI (s) (78:8C) [13:51:36:996]: User policy value 'DisableRollback' is 0
+MSI (s) (78:8C) [13:51:36:996]: Machine policy value 'DisableRollback' is 0
+MSI (s) (78:8C) [13:51:36:996]: Incrementing counter to disable shutdown. Counter after increment: 0
+MSI (s) (78:8C) [13:51:36:996]: Note: 1: 1402 2: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Installer\Rollback\Scripts 3: 2 
+MSI (s) (78:8C) [13:51:36:996]: Note: 1: 1402 2: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Installer\Rollback\Scripts 3: 2 
+MSI (s) (78:8C) [13:51:36:996]: Decrementing counter to disable shutdown. If counter >= 0, shutdown will be denied.  Counter after decrement: -1
+MSI (s) (78:8C) [13:51:36:996]: Restoring environment variables
+MSI (s) (78:8C) [13:51:36:996]: Destroying RemoteAPI object.
+MSI (s) (78:C8) [13:51:36:996]: Custom Action Manager thread ending.
+MSI (c) (A8:C0) [13:51:36:996]: Decrementing counter to disable shutdown. If counter >= 0, shutdown will be denied.  Counter after decrement: -1
+MSI (c) (A8:C0) [13:51:36:996]: MainEngineThread is returning 0
+=== Verbose logging stopped: 19/11/2026  13:51:36 ===
+

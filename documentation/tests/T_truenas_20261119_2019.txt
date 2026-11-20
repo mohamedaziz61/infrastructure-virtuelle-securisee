@@ -1,0 +1,23 @@
+=== TrueNAS SMB test from srv01 (VLAN20) 2026-11-19T21:03:42+01:00
+--- T445 reachability
+445 OPEN
+--- list shares (authenticated)
+	Sharename       Type      Comment
+	lab_share       Disk      Lab encrypted SMB share
+--- write + read back + snapshot recovery
+putting file /tmp/t.txt as \proof.txt (3,7 kb/s) (average 3,7 kb/s)
+  proof.txt                           A       19  Thu Nov 19 20:19:43 2026
+--- snapshot recovery test 2026-11-19T20:19:57+01:00
+1. snapshot tank/share@with-proof created
+   		9647360 blocks of size 1024. 9647104 blocks available
+2. proof.txt deleted via SMB (above: should be absent)
+3. rollback job: null
+4. after rollback, read back:
+getting file \proof.txt of size 19 as /tmp/r.txt (6,2 KiloBytes/sec) (average 6,2 KiloBytes/sec)
+   content: lab-secret-data-v1
+--- reboot persistence test 2026-11-19T20:21:40+01:00
+pool: ONLINE
+dataset locked: False
+cifs: RUNNING
+getting file \proof.txt of size 19 as /tmp/p2.txt (2,3 KiloBytes/sec) (average 2,3 KiloBytes/sec)
+SMB data after reboot: lab-secret-data-v1

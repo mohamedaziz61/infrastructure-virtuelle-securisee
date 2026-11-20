@@ -1,0 +1,6 @@
+Serveur :   fw01.lab.local
+Address:  192.168.10.1
+
+Nom :    srv01.lab.local
+Address:  192.168.20.10
+

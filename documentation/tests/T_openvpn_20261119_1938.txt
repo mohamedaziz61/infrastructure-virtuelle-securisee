@@ -1,0 +1,63 @@
+=== OpenVPN remote-access test (client in container, enters via pfSense WAN 192.168.101.10:1194) 2026-11-19T18:38:43+00:00
+FY OK: depth=1, CN=LAB-ROOT-CA, O=Projet Cloud
+FY OK: depth=0, CN=fw01.lab.local, O=Projet Cloud
+rol Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 256 bits ECprime256v1, signature: ecdsa-with-SHA256, peer temporary key: 253 bits X25519
+1.lab.local] Peer Connection Initiated with [AF_INET]192.168.101.10:1194
+: Received control message: 'PUSH_REPLY,route 192.168.20.0 255.255.255.0,route 192.168.30.0 255.255.255.0,dhcp-option DOMAIN lab.local,dhcp-option DNS 192.168.20.1,route-gateway 10.8.0.1,topology subnet,ping 10,ping-restart 60,ifconfig 10.8.0.2 255.255.255.0,peer-id 0,cipher AES-256-GCM,protocol-flags cc-exit tls-ekm dyn-tls-crypt,tun-mtu 1500'
+ialization Sequence Completed
+ Channel: cipher 'AES-256-GCM', peer-id: 0
+--- tunnel
+tun0             UNKNOWN        10.8.0.2/24 
+10.8.0.0/24 dev tun0 proto kernel scope link src 10.8.0.2 
+192.168.20.0/24 via 10.8.0.1 dev tun0 
+192.168.30.0/24 via 10.8.0.1 dev tun0 
+--- access rules (VPN 10.8.0.0/24)
+192.168.20.10:8080     VPN -> application                   OPEN     expected OPEN     PASS
+192.168.20.10:3000     VPN -> Grafana                       OPEN     expected OPEN     PASS
+192.168.20.10:22       VPN -> srv01 SSH (not in pfSense rule) BLOCKED  expected BLOCKED  PASS
+192.168.20.10:9100     VPN -> node_exporter                 BLOCKED  expected BLOCKED  PASS
+192.168.10.50:9182     VPN -> Windows client                OPEN     expected BLOCKED  FAIL
+192.168.99.1:443       VPN -> MGMT / pfSense GUI            OPEN     expected BLOCKED  FAIL
+192.168.20.1:443       VPN -> pfSense GUI (VLAN20 IP)       BLOCKED  expected BLOCKED  PASS
+--- HTTP through tunnel
+{"db":"ok","status":"ok"}
+
+Grafana /login HTTP 200
+--- ICMP
+VPN gateway 10.8.0.1 ping OK
+srv01 ping OK (VPN ICMP rule)
+
+=== RETEST: malicious client forces other networks through the tunnel 2026-11-19T18:39:20+00:00
+10.8.0.0/24 dev tun0 proto kernel scope link src 10.8.0.2 
+192.168.10.0/24 via 10.8.0.1 dev tun0 
+192.168.20.0/24 via 10.8.0.1 dev tun0 
+192.168.30.0/24 via 10.8.0.1 dev tun0 
+192.168.99.0/24 via 10.8.0.1 dev tun0 
+192.168.101.0/24 via 10.8.0.1 dev tun0 
+192.168.10.50:9182     VPN -> Windows client (exporter)     BLOCKED  expected BLOCKED  PASS
+192.168.10.50:445      VPN -> Windows client SMB            BLOCKED  expected BLOCKED  PASS
+192.168.99.1:443       VPN -> MGMT pfSense GUI              BLOCKED  expected BLOCKED  PASS
+192.168.99.1:22        VPN -> MGMT pfSense SSH              BLOCKED  expected BLOCKED  PASS
+192.168.99.10:22       VPN -> admin workstation             BLOCKED  expected BLOCKED  PASS
+192.168.20.10:8080     VPN -> application (still allowed)   BLOCKED  expected OPEN     FAIL
+MGMT ping: BLOCKED (PASS)
+--- pfSense: VPN client + firewall log
+Nov 19 19:39:21 fw01 openvpn[16691]: vpnuser1/192.168.101.1:53273 Timers: ping 10, ping-restart 120, inactive 300
+Nov 19 19:39:21 fw01 openvpn[16691]: vpnuser1/192.168.101.1:53273 Protocol options: protocol-flags cc-exit tls-ekm dyn-tls-crypt
+NOTE: previous 8080 FAIL caused by test error (192.168.101.0/24 routed into tunnel includes the VPN server endpoint -> tunnel loop). Retest below without that route.
+
+=== RETEST 2: forced routes 192.168.10.0/24 + 192.168.99.0/24 via tunnel 2026-11-19T18:40:00+00:00
+192.168.20.10:8080     VPN -> application                   OPEN     expected OPEN     PASS
+192.168.20.10:3000     VPN -> Grafana                       OPEN     expected OPEN     PASS
+192.168.10.50:9182     VPN -> Windows client (exporter)     BLOCKED  expected BLOCKED  PASS
+192.168.10.50:445      VPN -> Windows client SMB            BLOCKED  expected BLOCKED  PASS
+192.168.99.1:443       VPN -> MGMT pfSense GUI              BLOCKED  expected BLOCKED  PASS
+192.168.99.1:22        VPN -> MGMT pfSense SSH              BLOCKED  expected BLOCKED  PASS
+192.168.99.10:22       VPN -> admin workstation             BLOCKED  expected BLOCKED  PASS
+MGMT ping: OPEN (FAIL)
+
+=== RETEST 3 after narrowing VPN ICMP rule 2026-11-19T18:40:50+00:00
+MGMT ping: BLOCKED (PASS)
+srv01 ping: OPEN (PASS)
+app 8080: OPEN (PASS)
+VPN -> nas01:445 OPEN (PASS)

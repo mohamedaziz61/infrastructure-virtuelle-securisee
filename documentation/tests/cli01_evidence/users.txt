@@ -1,0 +1,8 @@
+
+comptes d'utilisateurs de \\
+
+-------------------------------------------------------------------------------
+Administrateur           Invité                   labadmin                 
+user1                    
+Des erreurs ont affecté l'exécution de la commande.
+

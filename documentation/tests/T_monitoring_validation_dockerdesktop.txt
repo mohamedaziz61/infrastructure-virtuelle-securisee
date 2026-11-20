@@ -1,0 +1,81 @@
+=== Monitoring stack validation on Docker Desktop 2026-11-19T11:26:09+01:00
+--- promtool check config
+Unable to find image 'prom/prometheus:v3.5.0' locally
+v3.5.0: Pulling from prom/prometheus
+76619c1908eb: Pulling fs layer
+5e4c02bc6754: Pulling fs layer
+a4e782810d03: Pulling fs layer
+2ee6cb77bebd: Pulling fs layer
+208063e2dcbb: Pulling fs layer
+9fa9226be034: Pulling fs layer
+2dfc70ad9941: Pulling fs layer
+1617e25568b2: Pulling fs layer
+fd1d3a5a5f79: Pulling fs layer
+097a69c6efe6: Pulling fs layer
+76619c1908eb: Download complete
+a4e782810d03: Download complete
+208063e2dcbb: Download complete
+fd1d3a5a5f79: Download complete
+2dfc70ad9941: Download complete
+5e4c02bc6754: Download complete
+9fa9226be034: Download complete
+9fa9226be034: Pull complete
+1617e25568b2: Download complete
+1617e25568b2: Pull complete
+097a69c6efe6: Download complete
+2ee6cb77bebd: Download complete
+097a69c6efe6: Pull complete
+2ee6cb77bebd: Pull complete
+76619c1908eb: Pull complete
+a4e782810d03: Pull complete
+fd1d3a5a5f79: Pull complete
+2dfc70ad9941: Pull complete
+5e4c02bc6754: Pull complete
+208063e2dcbb: Pull complete
+Digest: sha256:63805ebb8d2b3920190daf1cb14a60871b16fd38bed42b857a3182bc621f4996
+Status: Downloaded newer image for prom/prometheus:v3.5.0
+Checking prometheus/prometheus.yml
+
+  FAILED: "/etc/prometheus/rules.yml" does not point to an existing file
+--- start prometheus grafana blackbox snmp
+ Container monitoring-test-prometheus-1 Started 
+ Container monitoring-test-grafana-1 Starting 
+ Container monitoring-test-grafana-1 Started 
+SERVICE      STATUS                    PORTS
+blackbox     Up 41 seconds             9115/tcp
+grafana      Up 40 seconds (healthy)   127.0.0.1:3000->3000/tcp
+prometheus   Up 40 seconds (healthy)   127.0.0.1:9090->9090/tcp
+snmp         Up 41 seconds             9116/tcp
+--- prometheus targets (health)
+blackbox-http    http://blackbox:9115/probe?module=http_2xx&target=http%3A%2F up
+blackbox-icmp    http://blackbox:9115/probe?module=icmp&target=192.168.20.1   up
+blackbox-icmp    http://blackbox:9115/probe?module=icmp&target=192.168.30.10  up
+blackbox-icmp    http://blackbox:9115/probe?module=icmp&target=192.168.10.50  up
+blackbox-tcp     http://blackbox:9115/probe?module=tcp_connect&target=192.168 up
+blackbox-tcp     http://blackbox:9115/probe?module=tcp_connect&target=192.168 up
+blackbox-tcp     http://blackbox:9115/probe?module=tcp_connect&target=192.168 up
+labapp           http://192.168.20.10:8080/metrics                            down
+node-srv01       http://192.168.20.10:9100/metrics                            down
+pfsense-snmp     http://snmp:9116/snmp?auth=lab_v2&module=if_mib&module=hrSys down
+prometheus       http://localhost:9090/metrics                                up
+windows-cli01    http://192.168.10.50:9182/metrics                            down
+--- prometheus rules loaded
+['TargetDown', 'ServiceProbeFailed', 'HighMemory', 'DiskAlmostFull']
+--- grafana health
+{
+  "database": "ok",
+  "version": "12.1.1",
+  "commit": "df5de8219b41d1e639e003bf5f3a85913761d167"
+}
+--- grafana anonymous access (expect 401)
+401
+--- grafana provisioned datasource + dashboard (authenticated)
+[('Prometheus', 'http://prometheus:9090')]
+[('Projet Cloud', None), ("Projet Cloud � Vue d'ensemble infrastructure", 'Projet Cloud')]
+--- snmp exporter modules if_mib/hrSystem present
+2
+
+--- ANALYSE (rédigée après exécution)
+* promtool "FAILED rules.yml": artefact du test (montage sous /p au lieu de /etc/prometheus). Prometheus en exécution a bien chargé les 4 règles (cf. "prometheus rules loaded").
+* Cibles "down" (labapp, node-srv01, pfsense-snmp, windows-cli01): attendu — validation sur Docker Desktop, les VMs ne sont pas encore installées. Les cibles blackbox "up" signifient seulement que l'exporter répond; le résultat réel des sondes est probe_success.
+* Résultat: configuration valide; supervision réelle à valider après déploiement sur srv01 (Phase 10).

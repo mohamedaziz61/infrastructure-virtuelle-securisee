@@ -1,0 +1,37 @@
+
+Configuration IP de Windows
+
+   Nom de l'hôte . . . . . . . . . . : CLI01
+   Suffixe DNS principal . . . . . . : 
+   Type de noeud. . . . . . . . . .  : Hybride
+   Routage IP activé . . . . . . . . : Non
+   Proxy WINS activé . . . . . . . . : Non
+   Liste de recherche du suffixe DNS.: lab.local
+
+Carte Ethernet Connexion au réseau local :
+
+   Suffixe DNS propre à la connexion. . . : lab.local
+   Description. . . . . . . . . . . . . . : Connexion réseau Intel(R) PRO/1000 MT
+   Adresse physique . . . . . . . . . . . : 00-50-56-2A-10-50
+   DHCP activé. . . . . . . . . . . . . . : Oui
+   Configuration automatique activée. . . : Oui
+   Adresse IPv6 de liaison locale. . . . .: fe80::6c34:f443:5de:6b0f%11(préféré) 
+   Adresse IPv4. . . . . . . . . . . . . .: 192.168.10.50(préféré) 
+   Masque de sous-réseau. . . . . . . . . : 255.255.255.0
+   Bail obtenu. . . . . . . . . . . . . . : jeudi 19 novembre 2026 13:51:22
+   Bail expirant. . . . . . . . . . . . . : jeudi 19 novembre 2026 15:51:21
+   Passerelle par défaut. . . . . . . . . : 192.168.10.1
+   Serveur DHCP . . . . . . . . . . . . . : 192.168.10.1
+   IAID DHCPv6 . . . . . . . . . . . : 234901590
+   DUID de client DHCPv6. . . . . . . . : 00-01-00-01-32-90-93-3C-00-50-56-2A-10-50
+   Serveurs DNS. . .  . . . . . . . . . . : 192.168.10.1
+   NetBIOS sur Tcpip. . . . . . . . . . . : Activé
+
+Carte Tunnel isatap.lab.local :
+
+   Statut du média. . . . . . . . . . . . : Média déconnecté
+   Suffixe DNS propre à la connexion. . . : lab.local
+   Description. . . . . . . . . . . . . . : Carte Microsoft ISATAP
+   Adresse physique . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP activé. . . . . . . . . . . . . . : Non
+   Configuration automatique activée. . . : Oui

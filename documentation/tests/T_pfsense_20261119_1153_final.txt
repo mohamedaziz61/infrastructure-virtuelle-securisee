@@ -1,0 +1,34 @@
+=== pfSense tests (after NIC slot fix) Thu Nov 19 11:53:54 CET 2026
+--- T-IF interface/MAC/IP
+em0 00:50:56:2a:01:00 192.168.101.10 active 
+em1 00:50:56:2a:01:10 192.168.10.1 active 
+em2 00:50:56:2a:01:20 192.168.20.1 active 
+em3 00:50:56:2a:01:30 192.168.30.1 active 
+em4 00:50:56:2a:01:99 192.168.99.1 active 
+--- T-GW
+default            192.168.101.2      UGS         em0
+round-trip min/avg/max/stddev = 0.324/1.477/2.630/1.153 ms
+--- T-NAT/Internet
+3 packets transmitted, 3 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 43.429/43.647/43.838/0.168 ms
+--- T-DNS external
+www.debian.org.	300	IN	A	194.177.211.216
+--- T-DNS local
+srv01.lab.local.	3600	IN	A	192.168.20.10
+nas01.lab.local.	3600	IN	A	192.168.30.10
+--- T-DNSSEC (broken signatures must give SERVFAIL)
+rcode: SERVFAIL
+--- T-DHCP dhcpd interface
+em1
+--- T-DHCP leases
+--- T-VPN
+root     openvpn    40334 6   udp4   192.168.101.10:1194   *:*
+	inet 10.8.0.1 netmask 0xffffff00 broadcast 10.8.0.255
+--- T-SNMP
+root     bsnmpd      1805 5   udp4   192.168.20.1:161      *:*
+--- T-NAT outbound
+nat on em0 inet from <tonatsubnets> to any port = isakmp -> 192.168.101.10 static-port
+nat on em0 inet from <tonatsubnets> to any -> 192.168.101.10 port 1024:65535
+--- T-FW states/rules
+96
+  current entries                      186               

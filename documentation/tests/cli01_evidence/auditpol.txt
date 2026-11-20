@@ -1,0 +1,64 @@
+Stratégie d'audit système
+Catégorie/Sous-catégorie                  Paramètre
+Système
+  Extension système de sécurité           Succès et échec
+  Intégrité du système                    Succès et échec
+  Pilote IPSEC                            Succès et échec
+  Autres événements système               Succès et échec
+  Modification de l'état de la sécurité   Succès et échec
+Ouverture/Fermeture de session
+  Ouvrir la session                       Succès et échec
+  Fermer la session                       Succès et échec
+  Verrouillage du compte                  Succès et échec
+  Mode principal IPsec                    Succès et échec
+  Mode rapide IPsec                       Succès et échec
+  Mode étendu IPsec                       Succès et échec
+  Ouverture de session spéciale           Succès et échec
+  Autres événements d'ouverture/fermeture de sessionSuccès et échec
+  Serveur NPS                             Succès et échec
+Accès aux objets
+  Système de fichiers                     Succès et échec
+  Registre                                Succès et échec
+  Objet de noyau                          Succès et échec
+  SAM                                     Succès et échec
+  Services de certification               Succès et échec
+  Généré par application                  Succès et échec
+  Manipulation de handle                  Succès et échec
+  Partage de fichiers                     Succès et échec
+  Rejet de paquet par la plateforme de filtrageSuccès et échec
+  Connexion de la plateforme de filtrage  Succès et échec
+  Autres événements d'accès à l'objet     Succès et échec
+  Partage de fichiers détaillé            Succès et échec
+Utilisation de privilège
+  Utilisation de privilèges sensibles     Succès et échec
+  Utilisation de privilèges non sensibles Succès et échec
+  Autres événements d'utilisation de privilègesSuccès et échec
+Suivi détaillé
+  Fin du processus                        Succès et échec
+  Activité DPAPI                          Succès et échec
+  Événements RPC                          Succès et échec
+  Création du processus                   Succès et échec
+Changement de stratégie
+  Modification de la stratégie d'audit    Succès et échec
+  Modification de la stratégie d'authentificationSuccès et échec
+  Modification de la stratégie d'autorisationSuccès et échec
+  Modification de la stratégie de niveau règle MPSSVCSuccès et échec
+  Modification de la stratégie de plateforme de filtrageSuccès et échec
+  Autres événements de modification de stratégieSuccès et échec
+Gestion des comptes
+  Gestion des comptes d'utilisateur       Succès et échec
+  Gestion des comptes d'ordinateur        Succès et échec
+  Gestion des groupes de sécurité         Succès et échec
+  Gestion des groupes de distribution     Succès et échec
+  Gestion des groupes d'applications      Succès et échec
+  Autres événements de gestion des comptesSuccès et échec
+Accès DS
+  Modification du service d'annuaire      Succès et échec
+  Réplication du service d'annuaire       Succès et échec
+  Réplication du service d'annuaire détailléSuccès et échec
+  Accès au service d'annuaire             Succès et échec
+Connexion de compte
+  Opérations de ticket du service KerberosSuccès et échec
+  Autres événements d'ouverture de sessionSuccès et échec
+  Service d'authentification Kerberos     Succès et échec
+  Validation des informations d'identificationSuccès et échec

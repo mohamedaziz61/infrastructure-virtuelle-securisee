@@ -1,0 +1,4 @@
+19/11/2026 18:21:22,18 start
+autorite nt\système
+[SC] DeleteService réussite(s)
+19/11/2026 18:22:15,34 shutdown

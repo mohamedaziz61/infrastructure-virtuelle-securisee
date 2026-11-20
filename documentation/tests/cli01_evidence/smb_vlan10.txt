@@ -1,0 +1,7 @@
+=== Win7 (VLAN10) -> TrueNAS SMB test 2026-11-19T20:27:05
+TCP 192.168.30.10:445 : OPEN (PASS)
+net use: L'erreur syst?me 67 s'est produite. 
+Nom de r?seau introuvable.
+
+
+share mount: FAIL

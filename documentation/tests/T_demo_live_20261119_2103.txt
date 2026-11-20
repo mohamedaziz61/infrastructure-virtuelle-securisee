@@ -1,0 +1,55 @@
+################ TEST EN DIRECT — 2026-11-19T21:03:36+01:00 ################
+
+===== 1. pfSense (pare-feu) =====
+1.1 Nombre de regles pare-feu (USER_RULE)            38 regles
+1.2 NAT / Internet (ping 9.9.9.9)                    OK
+1.3 DNS interne (srv01.lab.local)                    resolu 192.168.20.10
+1.4 DNS externe (www.debian.org)                     resolu
+1.5 DNSSEC (domaine casse -> SERVFAIL)               rcode: SERVFAIL
+
+===== 2. Ubuntu srv01 (durcissement) =====
+2.1 SSH par cle                                      OK
+2.2 SSH par mot de passe REFUSE                      refuse (PASS)
+2.3 Pare-feu UFW actif                               actif
+2.4 fail2ban (jail sshd)                             OK
+2.5 auditd (regles chargees)                         12 regles
+2.6 Conteneurs Docker actifs                         7
+
+===== 3. Application conteneurisee =====
+3.1 Sante application (/health)                      {"db":"ok","status":"ok"}
+3.2 Ecriture + metrique                              labapp_assets_total 4
+
+===== 4. Supervision (Prometheus / Grafana) =====
+4.1 Cibles Prometheus                                11/11 up
+4.2 Metrique Windows 7 (cli01)                       version 6.1.7600
+4.3 Grafana API SANS auth (401 attendu)              HTTP 401
+4.4 Grafana tableau de bord (avec auth)              
+
+===== 5. TrueNAS (stockage) =====
+5.1 Pool ZFS tank                                    ONLINE MIRROR
+5.2 Dataset tank/share                               chiffre AES-256-GCM deverrouille
+5.3 Service SMB (cifs)                               RUNNING
+5.4 Snapshots existants                              3 snapshots
+
+===== 6. Partage SMB (depuis srv01, SMB3) =====
+6.1 Connexion SMB authentifiee + lecture             OK (proof.txt visible)
+4.4b Grafana tableau (auth, methode robuste):
+
+===== 7. Segmentation VLAN (le pare-feu en action) =====
+7.1 VLAN20 -> application :8080                      OUVERT   (attendu OUVERT) PASS
+7.2 VLAN20 -> admin pfSense :443                     BLOQUE   (attendu BLOQUE) PASS
+7.3 VLAN20 -> SSH pfSense :22                        BLOQUE   (attendu BLOQUE) PASS
+7.4 VLAN20 -> Windows 7 :445                         BLOQUE   (attendu BLOQUE) PASS
+7.5 VLAN20 -> SMB TrueNAS :445                       OUVERT   (attendu OUVERT) PASS
+
+===== 8. OpenVPN (acces distant par le WAN) =====
+8.1 Tunnel etabli                                    OK (IP 10.8.0.2/24)
+8.2 VPN -> application :8080                          OUVERT (attendu OUVERT) PASS
+8.3 VPN -> admin pfSense (MGMT) :443                  BLOQUE (attendu BLOQUE) PASS
+4.4 Grafana tableau de bord (avec auth)              
+4.5 Grafana base de donnees                          
+
+################ FIN DES TESTS ################
+4.4 Grafana base de donnees                          ok (v12.1.1)
+4.5 Tableau de bord provisionne (auth)               Projet Cloud � Vue d'ensemble infrastructure
+4.6 Source de donnees (auth)                         Prometheus/prometheus
