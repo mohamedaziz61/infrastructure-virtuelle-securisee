@@ -1,0 +1,48 @@
+# Lab Inventory application (srv01, VLAN 20). Deploy: docker compose up -d --build
+# BIND_IP: 192.168.20.10 on srv01; 127.0.0.1 for local validation on Docker Desktop.
+name: labapp
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: inventory
+      POSTGRES_USER: inventory
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_password
+    secrets: [db_password]
+    volumes: [db_data:/var/lib/postgresql/data]
+    networks: [backend]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U inventory -d inventory"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    security_opt: [no-new-privileges:true]
+
+  web:
+    build: ./app
+    image: labapp-web:1.0
+    restart: unless-stopped
+    depends_on:
+      db: {condition: service_healthy}
+    environment:
+      DB_HOST: db
+      DB_PASSWORD_FILE: /run/secrets/db_password
+    secrets: [db_password]
+    ports: ["${BIND_IP:-127.0.0.1}:${APP_PORT:-8080}:8080"]
+    networks: [frontend, backend]
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+
+networks:
+  frontend: {}
+  backend: {internal: true}   # DB has no route outside the compose project
+
+volumes:
+  db_data: {}
+
+secrets:
+  db_password:
+    file: ./secrets/db_password.txt
