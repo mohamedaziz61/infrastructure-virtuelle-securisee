@@ -1,0 +1,41 @@
+<!-- Sysmon lab configuration (cli01, Windows 7). Schema 4.50 is accepted by Sysmon 13+.
+     Logs process creation, network connections, driver/image loads of unsigned code, registry Run keys,
+     file creation in startup/temp executables, and Sysmon config changes. -->
+<Sysmon schemaversion="4.50">
+  <HashAlgorithms>sha256</HashAlgorithms>
+  <CheckRevocation/>
+  <EventFiltering>
+    <RuleGroup name="proc" groupRelation="or">
+      <ProcessCreate onmatch="exclude"/>
+      <ProcessTerminate onmatch="include"/>
+    </RuleGroup>
+    <RuleGroup name="net" groupRelation="or">
+      <NetworkConnect onmatch="exclude">
+        <Image condition="is">C:\Program Files\windows_exporter\windows_exporter.exe</Image>
+      </NetworkConnect>
+    </RuleGroup>
+    <RuleGroup name="drv" groupRelation="or">
+      <DriverLoad onmatch="exclude">
+        <Signature condition="contains">Microsoft</Signature>
+      </DriverLoad>
+    </RuleGroup>
+    <RuleGroup name="reg" groupRelation="or">
+      <RegistryEvent onmatch="include">
+        <TargetObject condition="contains">\CurrentVersion\Run</TargetObject>
+        <TargetObject condition="contains">\Services\</TargetObject>
+        <TargetObject condition="contains">\Image File Execution Options\</TargetObject>
+      </RegistryEvent>
+    </RuleGroup>
+    <RuleGroup name="file" groupRelation="or">
+      <FileCreate onmatch="include">
+        <TargetFilename condition="contains">\Start Menu\Programs\Startup\</TargetFilename>
+        <TargetFilename condition="end with">.exe</TargetFilename>
+        <TargetFilename condition="end with">.ps1</TargetFilename>
+        <TargetFilename condition="end with">.bat</TargetFilename>
+      </FileCreate>
+    </RuleGroup>
+    <RuleGroup name="remote" groupRelation="or">
+      <CreateRemoteThread onmatch="exclude"/>
+    </RuleGroup>
+  </EventFiltering>
+</Sysmon>
