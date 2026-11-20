@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+  <rect width="1000" height="640" fill="#ffffff"/>
+  <text x="500" y="30" text-anchor="middle" font-size="20" font-weight="bold">Infrastructure virtuelle sécurisée — architecture réseau</text>
+  <!-- Host frame -->
+  <rect x="15" y="45" width="970" height="580" fill="none" stroke="#999" stroke-dasharray="6 4" rx="10"/>
+  <text x="30" y="65" fill="#666">Portable physique — Windows 11 + VMware Workstation 17.5.2</text>
+  <!-- Internet / WAN -->
+  <rect x="400" y="80" width="200" height="50" rx="8" fill="#eef3fb" stroke="#4a6fa5"/>
+  <text x="500" y="102" text-anchor="middle" font-weight="bold">Internet (via Wi-Fi hôte)</text>
+  <text x="500" y="120" text-anchor="middle">VMnet8 NAT 192.168.101.0/24</text>
+  <line x1="500" y1="130" x2="500" y2="190" stroke="#4a6fa5" stroke-width="2"/>
+  <text x="510" y="165">WAN em0 .101.10 — seul UDP 1194 entrant</text>
+  <!-- pfSense -->
+  <rect x="380" y="190" width="240" height="80" rx="10" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+  <text x="500" y="218" text-anchor="middle" font-weight="bold" font-size="15">pfSense 2.7.2 — fw01</text>
+  <text x="500" y="238" text-anchor="middle">Routage inter-VLAN · NAT · DHCP · DNS</text>
+  <text x="500" y="256" text-anchor="middle">Pare-feu default-deny · OpenVPN 10.8.0.0/24</text>
+  <!-- links -->
+  <line x1="420" y1="270" x2="130" y2="380" stroke="#333" stroke-width="2"/>
+  <line x1="470" y1="270" x2="380" y2="380" stroke="#333" stroke-width="2"/>
+  <line x1="530" y1="270" x2="630" y2="380" stroke="#333" stroke-width="2"/>
+  <line x1="580" y1="270" x2="870" y2="380" stroke="#333" stroke-width="2"/>
+  <!-- VLAN 10 -->
+  <rect x="35" y="380" width="200" height="200" rx="8" fill="#eafaf1" stroke="#27ae60"/>
+  <text x="135" y="402" text-anchor="middle" font-weight="bold">VLAN 10 — Clients</text>
+  <text x="135" y="420" text-anchor="middle">192.168.10.0/24 · gw .1</text>
+  <rect x="55" y="440" width="160" height="110" rx="6" fill="#fff" stroke="#27ae60"/>
+  <text x="135" y="462" text-anchor="middle" font-weight="bold">Windows 7 — cli01</text>
+  <text x="135" y="482" text-anchor="middle">DHCP .10.50</text>
+  <text x="135" y="500" text-anchor="middle">Sysmon · audit</text>
+  <text x="135" y="518" text-anchor="middle">Pare-feu Windows</text>
+  <text x="135" y="536" text-anchor="middle">windows_exporter :9182</text>
+  <!-- VLAN 20 -->
+  <rect x="280" y="380" width="200" height="200" rx="8" fill="#eef3fb" stroke="#2980b9"/>
+  <text x="380" y="402" text-anchor="middle" font-weight="bold">VLAN 20 — Serveurs</text>
+  <text x="380" y="420" text-anchor="middle">192.168.20.0/24 · gw .1</text>
+  <rect x="300" y="440" width="160" height="125" rx="6" fill="#fff" stroke="#2980b9"/>
+  <text x="380" y="462" text-anchor="middle" font-weight="bold">Ubuntu 25.04 — srv01</text>
+  <text x="380" y="480" text-anchor="middle">.20.10 · SSH clé</text>
+  <text x="380" y="498" text-anchor="middle">Docker Engine</text>
+  <text x="380" y="516" text-anchor="middle">App :8080</text>
+  <text x="380" y="534" text-anchor="middle">Prometheus · Grafana :3000</text>
+  <text x="380" y="552" text-anchor="middle">UFW · auditd · fail2ban</text>
+  <!-- VLAN 30 -->
+  <rect x="530" y="380" width="200" height="200" rx="8" fill="#fef5e7" stroke="#e67e22"/>
+  <text x="630" y="402" text-anchor="middle" font-weight="bold">VLAN 30 — Stockage</text>
+  <text x="630" y="420" text-anchor="middle">192.168.30.0/24 · gw .1</text>
+  <rect x="550" y="440" width="160" height="110" rx="6" fill="#fff" stroke="#e67e22"/>
+  <text x="630" y="462" text-anchor="middle" font-weight="bold">TrueNAS 25.10 — nas01</text>
+  <text x="630" y="482" text-anchor="middle">.30.10</text>
+  <text x="630" y="500" text-anchor="middle">ZFS miroir (2 disques)</text>
+  <text x="630" y="518" text-anchor="middle">SMB :445 · snapshots</text>
+  <text x="630" y="536" text-anchor="middle">dataset chiffré</text>
+  <!-- VLAN 99 -->
+  <rect x="770" y="380" width="200" height="200" rx="8" fill="#f4ecf7" stroke="#8e44ad"/>
+  <text x="870" y="402" text-anchor="middle" font-weight="bold">VLAN 99 — Management</text>
+  <text x="870" y="420" text-anchor="middle">192.168.99.0/24 · gw .1</text>
+  <rect x="790" y="440" width="160" height="90" rx="6" fill="#fff" stroke="#8e44ad"/>
+  <text x="870" y="462" text-anchor="middle" font-weight="bold">Poste admin (hôte)</text>
+  <text x="870" y="482" text-anchor="middle">VMnet5 .99.10</text>
+  <text x="870" y="500" text-anchor="middle">GUI/SSH pfSense</text>
+  <text x="870" y="518" text-anchor="middle">client OpenVPN</text>
+  <!-- legend -->
+  <text x="35" y="605" fill="#444">LAN Segments VMware (VLAN 10/20/30) : aucune interface hôte — tout trafic inter-segments traverse pfSense.</text>
+</svg>
