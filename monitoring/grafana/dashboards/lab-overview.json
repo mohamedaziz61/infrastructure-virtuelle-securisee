@@ -1,0 +1,380 @@
+{
+ "uid": "lab-overview",
+ "title": "Projet Cloud — Vue d'ensemble infrastructure",
+ "tags": [
+  "lab"
+ ],
+ "timezone": "browser",
+ "schemaVersion": 39,
+ "refresh": "30s",
+ "time": {
+  "from": "now-1h",
+  "to": "now"
+ },
+ "panels": [
+  {
+   "type": "stat",
+   "title": "Disponibilité des cibles (up)",
+   "datasource": {
+    "type": "prometheus",
+    "uid": "prom"
+   },
+   "gridPos": {
+    "h": 5,
+    "w": 12,
+    "x": 0,
+    "y": 0
+   },
+   "options": {
+    "colorMode": "background",
+    "reduceOptions": {
+     "calcs": [
+      "lastNotNull"
+     ]
+    },
+    "textMode": "value_and_name"
+   },
+   "fieldConfig": {
+    "defaults": {
+     "mappings": [
+      {
+       "type": "value",
+       "options": {
+        "0": {
+         "text": "DOWN",
+         "color": "red"
+        },
+        "1": {
+         "text": "UP",
+         "color": "green"
+        }
+       }
+      }
+     ],
+     "thresholds": {
+      "mode": "absolute",
+      "steps": [
+       {
+        "color": "red",
+        "value": null
+       },
+       {
+        "color": "green",
+        "value": 1
+       }
+      ]
+     }
+    },
+    "overrides": []
+   },
+   "targets": [
+    {
+     "refId": "A",
+     "expr": "up",
+     "legendFormat": "{{job}} {{instance}}"
+    }
+   ],
+   "id": 1
+  },
+  {
+   "type": "stat",
+   "title": "Sondes de service (blackbox)",
+   "datasource": {
+    "type": "prometheus",
+    "uid": "prom"
+   },
+   "gridPos": {
+    "h": 5,
+    "w": 12,
+    "x": 12,
+    "y": 0
+   },
+   "options": {
+    "colorMode": "background",
+    "reduceOptions": {
+     "calcs": [
+      "lastNotNull"
+     ]
+    },
+    "textMode": "value_and_name"
+   },
+   "fieldConfig": {
+    "defaults": {
+     "mappings": [
+      {
+       "type": "value",
+       "options": {
+        "0": {
+         "text": "DOWN",
+         "color": "red"
+        },
+        "1": {
+         "text": "UP",
+         "color": "green"
+        }
+       }
+      }
+     ],
+     "thresholds": {
+      "mode": "absolute",
+      "steps": [
+       {
+        "color": "red",
+        "value": null
+       },
+       {
+        "color": "green",
+        "value": 1
+       }
+      ]
+     }
+    },
+    "overrides": []
+   },
+   "targets": [
+    {
+     "refId": "A",
+     "expr": "probe_success",
+     "legendFormat": "{{job}} {{instance}}"
+    }
+   ],
+   "id": 2
+  },
+  {
+   "type": "timeseries",
+   "title": "CPU % — srv01 / cli01",
+   "datasource": {
+    "type": "prometheus",
+    "uid": "prom"
+   },
+   "gridPos": {
+    "h": 8,
+    "w": 12,
+    "x": 0,
+    "y": 5
+   },
+   "fieldConfig": {
+    "defaults": {
+     "unit": "percent"
+    },
+    "overrides": []
+   },
+   "targets": [
+    {
+     "refId": "A",
+     "expr": "100 - avg by(instance)(rate(node_cpu_seconds_total{mode=\"idle\"}[2m]))*100",
+     "legendFormat": "{{instance}}"
+    },
+    {
+     "refId": "B",
+     "expr": "100 - avg by(instance)(rate(windows_cpu_time_total{mode=\"idle\"}[2m]))*100",
+     "legendFormat": "{{instance}}"
+    }
+   ],
+   "id": 3
+  },
+  {
+   "type": "timeseries",
+   "title": "RAM utilisée %",
+   "datasource": {
+    "type": "prometheus",
+    "uid": "prom"
+   },
+   "gridPos": {
+    "h": 8,
+    "w": 12,
+    "x": 12,
+    "y": 5
+   },
+   "fieldConfig": {
+    "defaults": {
+     "unit": "percent"
+    },
+    "overrides": []
+   },
+   "targets": [
+    {
+     "refId": "A",
+     "expr": "(1-node_memory_MemAvailable_bytes/node_memory_MemTotal_bytes)*100",
+     "legendFormat": "{{instance}}"
+    },
+    {
+     "refId": "B",
+     "expr": "(1-windows_os_physical_memory_free_bytes/windows_cs_physical_memory_bytes)*100",
+     "legendFormat": "{{instance}}"
+    },
+    {
+     "refId": "C",
+     "expr": "(1-windows_memory_available_bytes/windows_cs_physical_memory_bytes)*100",
+     "legendFormat": "{{instance}}"
+    }
+   ],
+   "id": 4
+  },
+  {
+   "type": "timeseries",
+   "title": "Disque utilisé %",
+   "datasource": {
+    "type": "prometheus",
+    "uid": "prom"
+   },
+   "gridPos": {
+    "h": 8,
+    "w": 12,
+    "x": 0,
+    "y": 13
+   },
+   "fieldConfig": {
+    "defaults": {
+     "unit": "percent"
+    },
+    "overrides": []
+   },
+   "targets": [
+    {
+     "refId": "A",
+     "expr": "(1-node_filesystem_avail_bytes{fstype!~\"tmpfs|overlay|squashfs\"}/node_filesystem_size_bytes)*100",
+     "legendFormat": "{{instance}} {{mountpoint}}"
+    },
+    {
+     "refId": "B",
+     "expr": "(1-windows_logical_disk_free_bytes/windows_logical_disk_size_bytes)*100",
+     "legendFormat": "{{instance}} {{volume}}"
+    }
+   ],
+   "id": 5
+  },
+  {
+   "type": "timeseries",
+   "title": "Trafic réseau srv01 / cli01 (bit/s)",
+   "datasource": {
+    "type": "prometheus",
+    "uid": "prom"
+   },
+   "gridPos": {
+    "h": 8,
+    "w": 12,
+    "x": 12,
+    "y": 13
+   },
+   "fieldConfig": {
+    "defaults": {
+     "unit": "bps"
+    },
+    "overrides": []
+   },
+   "targets": [
+    {
+     "refId": "A",
+     "expr": "rate(node_network_receive_bytes_total{device!~\"lo|veth.*|br-.*|docker.*\"}[2m])*8",
+     "legendFormat": "{{instance}} {{device}} rx"
+    },
+    {
+     "refId": "B",
+     "expr": "rate(node_network_transmit_bytes_total{device!~\"lo|veth.*|br-.*|docker.*\"}[2m])*8",
+     "legendFormat": "{{instance}} {{device}} tx"
+    },
+    {
+     "refId": "C",
+     "expr": "rate(windows_net_bytes_total[2m])*8",
+     "legendFormat": "{{instance}} {{nic}}"
+    }
+   ],
+   "id": 6
+  },
+  {
+   "type": "timeseries",
+   "title": "pfSense — trafic par interface (bit/s)",
+   "datasource": {
+    "type": "prometheus",
+    "uid": "prom"
+   },
+   "gridPos": {
+    "h": 8,
+    "w": 24,
+    "x": 0,
+    "y": 21
+   },
+   "fieldConfig": {
+    "defaults": {
+     "unit": "bps"
+    },
+    "overrides": []
+   },
+   "targets": [
+    {
+     "refId": "A",
+     "expr": "rate(ifHCInOctets{instance=\"fw01\"}[2m])*8",
+     "legendFormat": "{{ifDescr}} in"
+    },
+    {
+     "refId": "B",
+     "expr": "rate(ifHCOutOctets{instance=\"fw01\"}[2m])*8",
+     "legendFormat": "{{ifDescr}} out"
+    }
+   ],
+   "id": 7
+  },
+  {
+   "type": "timeseries",
+   "title": "Latence des sondes (s)",
+   "datasource": {
+    "type": "prometheus",
+    "uid": "prom"
+   },
+   "gridPos": {
+    "h": 8,
+    "w": 12,
+    "x": 0,
+    "y": 29
+   },
+   "fieldConfig": {
+    "defaults": {
+     "unit": "s"
+    },
+    "overrides": []
+   },
+   "targets": [
+    {
+     "refId": "A",
+     "expr": "probe_duration_seconds",
+     "legendFormat": "{{job}} {{instance}}"
+    }
+   ],
+   "id": 8
+  },
+  {
+   "type": "timeseries",
+   "title": "Application — actifs enregistrés / requêtes",
+   "datasource": {
+    "type": "prometheus",
+    "uid": "prom"
+   },
+   "gridPos": {
+    "h": 8,
+    "w": 12,
+    "x": 12,
+    "y": 29
+   },
+   "fieldConfig": {
+    "defaults": {
+     "unit": "short"
+    },
+    "overrides": []
+   },
+   "targets": [
+    {
+     "refId": "A",
+     "expr": "labapp_assets_total",
+     "legendFormat": "actifs"
+    },
+    {
+     "refId": "B",
+     "expr": "rate(labapp_requests_total[2m])",
+     "legendFormat": "req/s"
+    }
+   ],
+   "id": 9
+  }
+ ]
+}
