@@ -1,0 +1,58 @@
+# ============================================================
+#  Infrastructure virtuelle sécurisée — .gitignore
+#  NE JAMAIS committer : secrets, gros binaires (ISO, disques VM).
+# ============================================================
+
+# --- Secrets (mots de passe, clés PKI, clés VPN, communauté SNMP) ---
+secrets/
+**/secrets/
+*.env
+.env
+monitoring/snmp/auth.yml
+# Scripts de test avec mot de passe embarqué :
+scripts/win7/smbtest.ps1
+scripts/win7/resetpw.cmd
+*.ovpn
+*.key
+*.pem
+id_*
+*_ed25519*
+
+# --- Gros fichiers binaires : images ISO ---
+*.iso
+*.ISO
+
+# --- Machines virtuelles VMware (disques, états) ---
+VMs/
+*.vmdk
+*.vmx
+*.vmxf
+*.vmsd
+*.nvram
+*.vmem
+*.vmsn
+*.scoreboard
+*.lck
+vmware*.log
+
+# --- Sauvegardes (configs avec secrets, disque NAS 3,5 Go) ---
+backups/
+
+# --- Téléchargements (binaires : Sysmon, windows_exporter, MSI) ---
+downloads/
+
+# --- Journaux verbeux (on garde logs/operations.log) ---
+logs/*.log
+!logs/operations.log
+
+# --- Divers ---
+*.tmp
+scratchpad/
+__pycache__/
+*.pyc
+
+# Seed d'installation (contient mots de passe en clair / hash + cle)
+ISO/
+
+# Fichier parasite Windows
+NUL
